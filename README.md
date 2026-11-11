@@ -1,12 +1,12 @@
 <p align="center">
-  <img src="assets/hero.svg" alt="Madhura M R — full-stack developer, applied ML, distributed systems. Building real-world apps with clean, maintainable code. Open to software and ML internships." width="100%">
+  <img src="assets/hero.svg" alt="Madhura M R — full-stack developer, applied ML, distributed systems. Building real-world apps with clean, maintainable code." width="100%">
 </p>
 
 <!-- Prefer your own cherry blossom GIF banner? Swap the line above for:
 <p align="center"><img src="assets/banner.gif" alt="" width="100%"></p> -->
 
 <p align="center">
-  <img src="https://readme-typing-svg.demolab.com?font=Georgia&size=20&duration=3400&pause=900&color=C890A6&center=true&vCenter=true&width=640&height=38&lines=Hey+there%2C+I'm+Madhura+%F0%9F%8C%B8;I+build+full-stack+apps+that+check+their+own+claims;Growing+one+commit+at+a+time" alt="Hey there, I'm Madhura. I build full-stack apps that check their own claims.">
+  <img src="https://readme-typing-svg.demolab.com?font=Georgia&size=20&duration=3400&pause=900&color=C890A6&center=true&vCenter=true&width=640&height=38&lines=Hey+there%2C+I'm+Madhura+%F0%9F%8C%B8;Growing+one+commit+at+a+time" alt="Hey there, I'm Madhura.">
 </p>
 
 <br>
@@ -83,16 +83,7 @@
 
 <img src="assets/counted.svg" alt="8 public projects, 6 live consoles, 183 commits, 15 CI workflows. 61.5% Python, 14.5% TypeScript." width="100%">
 
-<p align="center">
-  <picture>
-    <source media="(prefers-color-scheme: dark)"
-            srcset="https://raw.githubusercontent.com/Madhuuu7/Madhuuu7/output/github-snake-dark.svg">
-    <img alt="A snake eating this year's contribution graph, one commit square at a time"
-         src="https://raw.githubusercontent.com/Madhuuu7/Madhuuu7/output/github-snake.svg" width="100%">
-  </picture>
-  <br>
-  <sub>A year of commits, eaten in order. Redrawn twice a day by <code>.github/workflows/snake.yml</code>.</sub>
-</p>
+<img src="assets/contributions.svg" alt="216 contributions in the last year, across 18 days" width="100%">
 
 <p align="center">
   <img src="https://img.shields.io/badge/Python-C890A6?style=flat-square&logo=python&logoColor=FFFDFB" alt="Python">

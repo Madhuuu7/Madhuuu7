@@ -86,7 +86,7 @@ def write(name: str, content: str) -> None:
 
 
 def hero() -> str:
-    h = 250
+    h = 222
     body = [
         '  <defs>',
         f'    <linearGradient id="sky" x1="0" y1="0" x2="0.85" y2="1">'
@@ -100,16 +100,16 @@ def hero() -> str:
         # two branches, one high left, one low right
         f'  <path d="M -10 58 C 120 30, 232 82, 344 52" fill="none" stroke="{ROSE}" '
         f'stroke-width="2.4" stroke-linecap="round" opacity="0.8"/>',
-        f'  <path d="M 1010 196 C 890 220, 796 170, 700 198" fill="none" stroke="{ROSE}" '
+        f'  <path d="M 1012 186 C 964 206, 920 174, 876 196" fill="none" stroke="{ROSE}" '
         f'stroke-width="2.4" stroke-linecap="round" opacity="0.8"/>',
         blossom(72, 44, 5.4, DUSTY, 0.95),
         blossom(164, 58, 4.2, DUSTY, 0.8),
         blossom(254, 68, 4.8, DUSTY, 0.65),
         blossom(330, 46, 3.6, ROSE, 0.6),
-        blossom(900, 190, 5.2, DUSTY, 0.9),
-        blossom(812, 204, 4.0, DUSTY, 0.7),
-        blossom(728, 186, 4.6, ROSE, 0.6),
-        blossom(120, 168, 3.2, ROSE, 0.5),
+        blossom(986, 190, 5.2, DUSTY, 0.9),
+        blossom(936, 196, 4.0, DUSTY, 0.7),
+        blossom(886, 190, 4.6, ROSE, 0.6),
+        blossom(62, 186, 3.2, ROSE, 0.5),
         blossom(946, 62, 3.4, ROSE, 0.5),
         # the eyebrow
         f'  <text x="{W/2}" y="56" text-anchor="middle" fill="{INK}" opacity="0.62" '
@@ -127,17 +127,6 @@ def hero() -> str:
         f'font-family="{SANS}" font-size="14">'
         f'Building real-world apps with clean, maintainable code &#8212; six of them live, '
         f'each with a console you can open.</text>',
-        # the availability pill
-        # The pill is sized around the text rather than guessed at: 33
-        # characters at 11.5px with 1.1 of tracking is about 250px, and the
-        # blossom needs its own 24px to the left of that or it prints on
-        # top of the first letter.
-        f'  <rect x="{W/2 - 158}" y="214" width="316" height="26" rx="13" fill="{PAPER}" '
-        f'stroke="{ROSE}" stroke-width="1.5"/>',
-        blossom(W / 2 - 138, 227, 3.6, DUSTY),
-        f'  <text x="{W/2 + 16}" y="231" text-anchor="middle" fill="{DUSTY}" '
-        f'font-family="{SANS}" font-size="11.5" letter-spacing="1.1">'
-        f'OPEN TO SOFTWARE &#38; ML INTERNSHIPS</text>',
     ]
     return svg(W, h, "\n".join(body), "Madhura M R — backend, applied ML, systems that measure themselves")
 
@@ -380,7 +369,116 @@ def counted() -> str:
                "8 public projects, 6 live consoles, 183 commits, 15 CI workflows; 61.5% Python")
 
 
-# -- 7. footer -------------------------------------------------------------
+# -- 7. the contribution year ---------------------------------------------
+
+# The calendar is a committed snapshot rather than a live call, for the same
+# reason every other panel here is a committed file: the page has to draw
+# itself with no network and no service in the middle. Refresh it with
+#
+#   gh api graphql -f login=Madhuuu7 -f query='query($login:String!){
+#     user(login:$login){contributionsCollection{contributionCalendar{
+#     totalContributions weeks{firstDay contributionDays{
+#     date contributionCount weekday}}}}}}' > assets/contributions.json
+#
+# and run this script again.
+
+# five steps, palest to deepest; index 0 is a day with nothing in it
+LEVELS = [HAIR, "#F3D6E0", ROSE, DUSTY, "#A9718A"]
+
+MONTHS = ["Jan", "Feb", "Mar", "Apr", "May", "Jun",
+          "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"]
+
+
+def _calendar() -> dict:
+    import json
+    raw = json.loads((HERE / "contributions.json").read_text(encoding="utf-8"))
+    return raw["data"]["user"]["contributionsCollection"]["contributionCalendar"]
+
+
+def _level(count: int, busiest: int) -> int:
+    """Which of the five tones a day gets.
+
+    The thresholds are a share of the busiest day rather than fixed counts,
+    so a quiet year does not render as a blank sheet and a loud one does not
+    saturate to a single tone.
+    """
+    if count <= 0:
+        return 0
+    for i, share in enumerate((0.10, 0.30, 0.60), start=1):
+        if count <= max(1, round(busiest * share)):
+            return i
+    return 4
+
+
+def contributions() -> str:
+    cal = _calendar()
+    weeks = cal["weeks"]
+    days = [d for w in weeks for d in w["contributionDays"]]
+    busiest = max((d["contributionCount"] for d in days), default=0)
+    active = sum(1 for d in days if d["contributionCount"])
+
+    left, top = 74, 86          # the weekday gutter, and the month strip
+    cell, gap = 13.0, 3.6
+    step = cell + gap
+    h = int(top + 7 * step + 76)
+
+    body = [card(W, h)]
+    body.append(f'  <text x="40" y="42" fill="{DUSTY}" font-family="{SANS}" font-size="12" '
+                f'letter-spacing="2.4">madhura@github ~ $ ./year.sh</text>')
+    body.append(f'  <line x1="40" y1="56" x2="{W - 40}" y2="56" stroke="{HAIR}" stroke-width="2"/>')
+
+    # month labels, written once where a month first appears
+    seen = set()
+    for wi, week in enumerate(weeks):
+        month = int(week["firstDay"][5:7])
+        if month in seen:
+            continue
+        seen.add(month)
+        x = left + wi * step
+        if x > W - 90:
+            continue
+        body.append(f'  <text x="{x:.1f}" y="{top - 10}" fill="{INK}" opacity="0.55" '
+                    f'font-family="{SANS}" font-size="11">{MONTHS[month - 1]}</text>')
+
+    # Monday, Wednesday, Friday, the way the calendar on the site labels them
+    for row, name in ((1, "Mon"), (3, "Wed"), (5, "Fri")):
+        y = top + row * step + cell - 2
+        body.append(f'  <text x="{left - 10}" y="{y:.1f}" text-anchor="end" fill="{INK}" '
+                    f'opacity="0.55" font-family="{SANS}" font-size="11">{name}</text>')
+
+    for wi, week in enumerate(weeks):
+        for day in week["contributionDays"]:
+            x = left + wi * step
+            y = top + day["weekday"] * step
+            tone = LEVELS[_level(day["contributionCount"], busiest)]
+            body.append(f'  <rect x="{x:.1f}" y="{y:.1f}" width="{cell}" height="{cell}" '
+                        f'rx="3" fill="{tone}"/>')
+
+    legend_y = top + 7 * step + 26
+    body.append(f'  <text x="{W - 40}" y="{legend_y + 10:.1f}" text-anchor="end" fill="{INK}" '
+                f'opacity="0.6" font-family="{SANS}" font-size="11.5">more</text>')
+    lx = W - 92
+    for tone in reversed(LEVELS):
+        body.append(f'  <rect x="{lx:.1f}" y="{legend_y:.1f}" width="{cell}" height="{cell}" '
+                    f'rx="3" fill="{tone}"/>')
+        lx -= step
+    body.append(f'  <text x="{lx + cell - 4:.1f}" y="{legend_y + 10:.1f}" text-anchor="end" '
+                f'fill="{INK}" opacity="0.6" font-family="{SANS}" font-size="11.5">less</text>')
+
+    total = cal["totalContributions"]
+    body.append(f'  <text x="40" y="{legend_y + 10:.1f}" fill="{INK}" opacity="0.78" '
+                f'font-family="{SANS}" font-size="13">'
+                f'{total} contributions in the last year, across {active} days '
+                f'&#8212; {busiest} on the busiest one</text>')
+    body.append(f'  <text x="40" y="{legend_y + 34:.1f}" fill="{INK}" opacity="0.5" '
+                f'font-family="{SANS}" font-size="11.5">'
+                f'a snapshot from the GitHub API, committed like every other panel here'
+                f'</text>')
+    return svg(W, h, "\n".join(body),
+               f"{total} contributions in the last year, across {active} days")
+
+
+# -- 8. footer -------------------------------------------------------------
 
 
 def footer() -> str:
@@ -428,6 +526,7 @@ def main() -> None:
         write(spec["file"], project_card(spec))
     write("how-i-build.svg", habits())
     write("counted.svg", counted())
+    write("contributions.svg", contributions())
     write("footer.svg", footer())
 
 
