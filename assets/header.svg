@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 230" width="1000" height="230" role="img" aria-label="Madhura M R — growing one commit at a time">
+  <title>Madhura M R — growing one commit at a time</title>
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0.8" y2="1">
+      <stop offset="0" stop-color="#F5E6EE"/>
+      <stop offset="0.5" stop-color="#FFFDFB"/>
+      <stop offset="1" stop-color="#F5E6EE"/>
+    </linearGradient>
+    <linearGradient id="ribbon" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#E0BAC6"/>
+      <stop offset="1" stop-color="#C890A6"/>
+    </linearGradient>
+    <g id="blossom">
+      <circle cx="0" cy="-6.2" r="5.1"/>
+      <circle cx="5.9" cy="-1.9" r="5.1"/>
+      <circle cx="3.6" cy="5" r="5.1"/>
+      <circle cx="-3.6" cy="5" r="5.1"/>
+      <circle cx="-5.9" cy="-1.9" r="5.1"/>
+      <circle cx="0" cy="0" r="2.1" fill="#FFFDFB"/>
+    </g>
+  </defs>
+
+  <rect width="1000" height="230" rx="14" fill="url(#sky)"/>
+  <rect width="1000" height="230" rx="14" fill="none" stroke="#E0BAC6" stroke-width="2"/>
+
+  <!-- a branch, drawn once, with blossoms resting on it -->
+  <path d="M -10 62 C 120 34, 236 86, 352 56" fill="none" stroke="#E0BAC6" stroke-width="2.4" stroke-linecap="round" opacity="0.85"/>
+  <path d="M 1010 182 C 886 206, 790 156, 690 184" fill="none" stroke="#E0BAC6" stroke-width="2.4" stroke-linecap="round" opacity="0.85"/>
+
+  <g fill="#C890A6">
+    <use href="#blossom" transform="translate(74 48) scale(1.25)" opacity="0.95"/>
+    <use href="#blossom" transform="translate(168 62) scale(0.95)" opacity="0.8"/>
+    <use href="#blossom" transform="translate(262 72) scale(1.1)" opacity="0.7"/>
+    <use href="#blossom" transform="translate(338 50) scale(0.8)" opacity="0.55"/>
+    <use href="#blossom" transform="translate(902 176) scale(1.2)" opacity="0.9"/>
+    <use href="#blossom" transform="translate(812 190) scale(0.9)" opacity="0.75"/>
+    <use href="#blossom" transform="translate(724 172) scale(1.05)" opacity="0.6"/>
+  </g>
+  <g fill="#E0BAC6">
+    <use href="#blossom" transform="translate(126 152) scale(0.7)" opacity="0.55"/>
+    <use href="#blossom" transform="translate(58 186) scale(0.55)" opacity="0.45"/>
+    <use href="#blossom" transform="translate(944 66) scale(0.7)" opacity="0.5"/>
+    <use href="#blossom" transform="translate(876 40) scale(0.55)" opacity="0.4"/>
+  </g>
+
+  <text x="500" y="112" text-anchor="middle" fill="#574A50"
+        font-family="Georgia, 'Iowan Old Style', 'Times New Roman', serif"
+        font-size="54" letter-spacing="1.5">Madhura M R</text>
+
+  <rect x="406" y="132" width="188" height="3" rx="1.5" fill="url(#ribbon)"/>
+
+  <text x="500" y="168" text-anchor="middle" fill="#C890A6"
+        font-family="'Segoe UI', system-ui, -apple-system, sans-serif"
+        font-size="19" letter-spacing="0.6">Growing one commit at a time</text>
+
+  <text x="500" y="198" text-anchor="middle" fill="#574A50" opacity="0.72"
+        font-family="'Segoe UI', system-ui, -apple-system, sans-serif"
+        font-size="13.5" letter-spacing="2.6">COMPUTER SCIENCE UNDERGRADUATE &#183; 2027</text>
+</svg>

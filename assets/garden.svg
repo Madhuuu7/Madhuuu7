@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 430" width="1000" height="430" role="img" aria-label="What each project measured">
+  <title>What each project measured</title>
+  <defs>
+    <g id="bud">
+      <circle cx="0" cy="-5" r="4.1"/>
+      <circle cx="4.8" cy="-1.5" r="4.1"/>
+      <circle cx="2.9" cy="4" r="4.1"/>
+      <circle cx="-2.9" cy="4" r="4.1"/>
+      <circle cx="-4.8" cy="-1.5" r="4.1"/>
+      <circle cx="0" cy="0" r="1.7" fill="#FFFDFB"/>
+    </g>
+  </defs>
+
+  <rect width="1000" height="430" rx="14" fill="#FFFDFB"/>
+  <rect width="1000" height="430" rx="14" fill="none" stroke="#E0BAC6" stroke-width="2"/>
+
+  <text x="40" y="52" fill="#C890A6"
+        font-family="'Segoe UI', system-ui, -apple-system, sans-serif"
+        font-size="20" font-weight="600">What each one measured</text>
+  <text x="40" y="76" fill="#574A50" opacity="0.74"
+        font-family="'Segoe UI', system-ui, -apple-system, sans-serif"
+        font-size="13.5">Every figure below came from a run I can point at, and most of them re-run in CI on each push.</text>
+
+  <line x1="40" y1="94" x2="960" y2="94" stroke="#F5E6EE" stroke-width="2"/>
+
+  <!-- gridcast -->
+  <g fill="#C890A6"><use href="#bud" transform="translate(52 124)"/></g>
+  <text x="76" y="129" fill="#574A50" font-family="'Segoe UI', system-ui, sans-serif" font-size="15.5" font-weight="600">gridcast</text>
+  <text x="300" y="129" fill="#C890A6" font-family="Georgia, serif" font-size="20">5.07% MAPE</text>
+  <text x="470" y="129" fill="#574A50" opacity="0.78" font-family="'Segoe UI', system-ui, sans-serif" font-size="13.5">across 32,391 out-of-sample blocks, 51% better than seasonal naive</text>
+
+  <line x1="40" y1="148" x2="960" y2="148" stroke="#F5E6EE" stroke-width="1.5"/>
+
+  <!-- relay -->
+  <g fill="#C890A6"><use href="#bud" transform="translate(52 178)"/></g>
+  <text x="76" y="183" fill="#574A50" font-family="'Segoe UI', system-ui, sans-serif" font-size="15.5" font-weight="600">relay</text>
+  <text x="300" y="183" fill="#C890A6" font-family="Georgia, serif" font-size="20">p95 &#8722;71.8%</text>
+  <text x="470" y="183" fill="#574A50" opacity="0.78" font-family="'Segoe UI', system-ui, sans-serif" font-size="13.5">4,640 ms to 1,308 ms, replayed over 4,000 requests on every push</text>
+
+  <line x1="40" y1="202" x2="960" y2="202" stroke="#F5E6EE" stroke-width="1.5"/>
+
+  <!-- revenant -->
+  <g fill="#C890A6"><use href="#bud" transform="translate(52 232)"/></g>
+  <text x="76" y="237" fill="#574A50" font-family="'Segoe UI', system-ui, sans-serif" font-size="15.5" font-weight="600">revenant</text>
+  <text x="300" y="237" fill="#C890A6" font-family="Georgia, serif" font-size="20">140 / 140</text>
+  <text x="470" y="237" fill="#574A50" opacity="0.78" font-family="'Segoe UI', system-ui, sans-serif" font-size="13.5">crash boundaries recovered, zero duplicate effects</text>
+
+  <line x1="40" y1="256" x2="960" y2="256" stroke="#F5E6EE" stroke-width="1.5"/>
+
+  <!-- transitlab -->
+  <g fill="#C890A6"><use href="#bud" transform="translate(52 286)"/></g>
+  <text x="76" y="291" fill="#574A50" font-family="'Segoe UI', system-ui, sans-serif" font-size="15.5" font-weight="600">transitlab</text>
+  <text x="300" y="291" fill="#C890A6" font-family="Georgia, serif" font-size="20">37 ms a query</text>
+  <text x="470" y="291" fill="#574A50" opacity="0.78" font-family="'Segoe UI', system-ui, sans-serif" font-size="13.5">in the browser, against 1,373 ms for the same algorithm in Python</text>
+
+  <line x1="40" y1="310" x2="960" y2="310" stroke="#F5E6EE" stroke-width="1.5"/>
+
+  <!-- verdict -->
+  <g fill="#C890A6"><use href="#bud" transform="translate(52 340)"/></g>
+  <text x="76" y="345" fill="#574A50" font-family="'Segoe UI', system-ui, sans-serif" font-size="15.5" font-weight="600">verdict</text>
+  <text x="300" y="345" fill="#C890A6" font-family="Georgia, serif" font-size="20">5.9% &#8594; 46.7%</text>
+  <text x="470" y="345" fill="#574A50" opacity="0.78" font-family="'Segoe UI', system-ui, sans-serif" font-size="13.5">false alarms, if you re-test after every case. A confidence sequence: 0.0%</text>
+
+  <line x1="40" y1="364" x2="960" y2="364" stroke="#F5E6EE" stroke-width="1.5"/>
+
+  <!-- nanofaas -->
+  <g fill="#C890A6"><use href="#bud" transform="translate(52 394)"/></g>
+  <text x="76" y="399" fill="#574A50" font-family="'Segoe UI', system-ui, sans-serif" font-size="15.5" font-weight="600">nanofaas</text>
+  <text x="300" y="399" fill="#C890A6" font-family="Georgia, serif" font-size="20">1,028&#215; warm</text>
+  <text x="470" y="399" fill="#574A50" opacity="0.78" font-family="'Segoe UI', system-ui, sans-serif" font-size="13.5">1.64 ms against a 1,319 ms cold start, 75% of which is the interpreter</text>
+</svg>
