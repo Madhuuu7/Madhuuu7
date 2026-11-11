@@ -122,10 +122,11 @@ def hero() -> str:
         # the role line
         f'  <text x="{W/2}" y="174" text-anchor="middle" fill="{DUSTY}" '
         f'font-family="{SANS}" font-size="17.5" font-weight="600" letter-spacing="0.4">'
-        f'Backend &#183; Applied ML &#183; Systems that measure themselves</text>',
+        f'Full-Stack Developer &#183; Applied ML &#183; Distributed Systems</text>',
         f'  <text x="{W/2}" y="200" text-anchor="middle" fill="{INK}" opacity="0.78" '
         f'font-family="{SANS}" font-size="14">'
-        f'Six public systems, each with a console you can open. Growing one commit at a time.</text>',
+        f'Building real-world apps with clean, maintainable code &#8212; six of them live, '
+        f'each with a console you can open.</text>',
         # the availability pill
         # The pill is sized around the text rather than guessed at: 33
         # characters at 11.5px with 1.1 of tracking is about 250px, and the
@@ -169,13 +170,13 @@ ABOUT_POINTS = [
 ]
 
 WHOAMI = [
-    ("role", "Computer science undergraduate, 2027"),
-    ("focus", "Backend services, applied ML, distributed systems"),
+    ("focus", "End-to-end web apps: API, data model, UI, and the CI that ships them"),
     ("languages", "Python, TypeScript, SQL, a little Solidity"),
     ("ml", "scikit-learn, pandas, NumPy, conformal prediction"),
     ("backend", "FastAPI, asyncio, Postgres, MongoDB, Docker"),
     ("frontend", "React, Vite, hand-written SVG when a chart has to be honest"),
-    ("ci", "GitHub Actions on every push, benchmarks included"),
+    ("testing", "pytest and vitest, on every push"),
+    ("ci", "GitHub Actions on every push"),
     ("proof", "6 live consoles, 183 commits, 15 workflows"),
 ]
 

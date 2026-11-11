@@ -21,25 +21,24 @@
     <rect width="528" height="332" rx="12" fill="#FFFDFB"/><rect width="528" height="332" rx="12" fill="none" stroke="#E0BAC6" stroke-width="2"/>
     <text x="24" y="36" fill="#C890A6" font-family="'Segoe UI', system-ui, -apple-system, 'Helvetica Neue', sans-serif" font-size="12.5">madhura@github ~ $ whoami</text>
     <line x1="24" y1="50" x2="504" y2="50" stroke="#F0DEE6" stroke-width="2"/>
-    <text x="24" y="76" fill="#C890A6" font-family="'Segoe UI', system-ui, -apple-system, 'Helvetica Neue', sans-serif" font-size="12.5" font-weight="600">role</text>
-    <text x="116" y="76" fill="#574A50" opacity="0.85" font-family="'Segoe UI', system-ui, -apple-system, 'Helvetica Neue', sans-serif" font-size="12.5">Computer science undergraduate, 2027</text>
-    <text x="24" y="103" fill="#C890A6" font-family="'Segoe UI', system-ui, -apple-system, 'Helvetica Neue', sans-serif" font-size="12.5" font-weight="600">focus</text>
-    <text x="116" y="103" fill="#574A50" opacity="0.85" font-family="'Segoe UI', system-ui, -apple-system, 'Helvetica Neue', sans-serif" font-size="12.5">Backend services, applied ML, distributed</text>
-    <text x="116" y="118" fill="#574A50" opacity="0.85" font-family="'Segoe UI', system-ui, -apple-system, 'Helvetica Neue', sans-serif" font-size="12.5">systems</text>
-    <text x="24" y="145" fill="#C890A6" font-family="'Segoe UI', system-ui, -apple-system, 'Helvetica Neue', sans-serif" font-size="12.5" font-weight="600">languages</text>
-    <text x="116" y="145" fill="#574A50" opacity="0.85" font-family="'Segoe UI', system-ui, -apple-system, 'Helvetica Neue', sans-serif" font-size="12.5">Python, TypeScript, SQL, a little Solidity</text>
-    <text x="24" y="172" fill="#C890A6" font-family="'Segoe UI', system-ui, -apple-system, 'Helvetica Neue', sans-serif" font-size="12.5" font-weight="600">ml</text>
-    <text x="116" y="172" fill="#574A50" opacity="0.85" font-family="'Segoe UI', system-ui, -apple-system, 'Helvetica Neue', sans-serif" font-size="12.5">scikit-learn, pandas, NumPy, conformal</text>
-    <text x="116" y="187" fill="#574A50" opacity="0.85" font-family="'Segoe UI', system-ui, -apple-system, 'Helvetica Neue', sans-serif" font-size="12.5">prediction</text>
-    <text x="24" y="214" fill="#C890A6" font-family="'Segoe UI', system-ui, -apple-system, 'Helvetica Neue', sans-serif" font-size="12.5" font-weight="600">backend</text>
-    <text x="116" y="214" fill="#574A50" opacity="0.85" font-family="'Segoe UI', system-ui, -apple-system, 'Helvetica Neue', sans-serif" font-size="12.5">FastAPI, asyncio, Postgres, MongoDB, Docker</text>
-    <text x="24" y="241" fill="#C890A6" font-family="'Segoe UI', system-ui, -apple-system, 'Helvetica Neue', sans-serif" font-size="12.5" font-weight="600">frontend</text>
-    <text x="116" y="241" fill="#574A50" opacity="0.85" font-family="'Segoe UI', system-ui, -apple-system, 'Helvetica Neue', sans-serif" font-size="12.5">React, Vite, hand-written SVG when a chart</text>
-    <text x="116" y="256" fill="#574A50" opacity="0.85" font-family="'Segoe UI', system-ui, -apple-system, 'Helvetica Neue', sans-serif" font-size="12.5">has to be honest</text>
+    <text x="24" y="76" fill="#C890A6" font-family="'Segoe UI', system-ui, -apple-system, 'Helvetica Neue', sans-serif" font-size="12.5" font-weight="600">focus</text>
+    <text x="116" y="76" fill="#574A50" opacity="0.85" font-family="'Segoe UI', system-ui, -apple-system, 'Helvetica Neue', sans-serif" font-size="12.5">End-to-end web apps: API, data model, UI,</text>
+    <text x="116" y="91" fill="#574A50" opacity="0.85" font-family="'Segoe UI', system-ui, -apple-system, 'Helvetica Neue', sans-serif" font-size="12.5">and the CI that ships them</text>
+    <text x="24" y="118" fill="#C890A6" font-family="'Segoe UI', system-ui, -apple-system, 'Helvetica Neue', sans-serif" font-size="12.5" font-weight="600">languages</text>
+    <text x="116" y="118" fill="#574A50" opacity="0.85" font-family="'Segoe UI', system-ui, -apple-system, 'Helvetica Neue', sans-serif" font-size="12.5">Python, TypeScript, SQL, a little Solidity</text>
+    <text x="24" y="145" fill="#C890A6" font-family="'Segoe UI', system-ui, -apple-system, 'Helvetica Neue', sans-serif" font-size="12.5" font-weight="600">ml</text>
+    <text x="116" y="145" fill="#574A50" opacity="0.85" font-family="'Segoe UI', system-ui, -apple-system, 'Helvetica Neue', sans-serif" font-size="12.5">scikit-learn, pandas, NumPy, conformal</text>
+    <text x="116" y="160" fill="#574A50" opacity="0.85" font-family="'Segoe UI', system-ui, -apple-system, 'Helvetica Neue', sans-serif" font-size="12.5">prediction</text>
+    <text x="24" y="187" fill="#C890A6" font-family="'Segoe UI', system-ui, -apple-system, 'Helvetica Neue', sans-serif" font-size="12.5" font-weight="600">backend</text>
+    <text x="116" y="187" fill="#574A50" opacity="0.85" font-family="'Segoe UI', system-ui, -apple-system, 'Helvetica Neue', sans-serif" font-size="12.5">FastAPI, asyncio, Postgres, MongoDB, Docker</text>
+    <text x="24" y="214" fill="#C890A6" font-family="'Segoe UI', system-ui, -apple-system, 'Helvetica Neue', sans-serif" font-size="12.5" font-weight="600">frontend</text>
+    <text x="116" y="214" fill="#574A50" opacity="0.85" font-family="'Segoe UI', system-ui, -apple-system, 'Helvetica Neue', sans-serif" font-size="12.5">React, Vite, hand-written SVG when a chart</text>
+    <text x="116" y="229" fill="#574A50" opacity="0.85" font-family="'Segoe UI', system-ui, -apple-system, 'Helvetica Neue', sans-serif" font-size="12.5">has to be honest</text>
+    <text x="24" y="256" fill="#C890A6" font-family="'Segoe UI', system-ui, -apple-system, 'Helvetica Neue', sans-serif" font-size="12.5" font-weight="600">testing</text>
+    <text x="116" y="256" fill="#574A50" opacity="0.85" font-family="'Segoe UI', system-ui, -apple-system, 'Helvetica Neue', sans-serif" font-size="12.5">pytest and vitest, on every push</text>
     <text x="24" y="283" fill="#C890A6" font-family="'Segoe UI', system-ui, -apple-system, 'Helvetica Neue', sans-serif" font-size="12.5" font-weight="600">ci</text>
-    <text x="116" y="283" fill="#574A50" opacity="0.85" font-family="'Segoe UI', system-ui, -apple-system, 'Helvetica Neue', sans-serif" font-size="12.5">GitHub Actions on every push, benchmarks</text>
-    <text x="116" y="298" fill="#574A50" opacity="0.85" font-family="'Segoe UI', system-ui, -apple-system, 'Helvetica Neue', sans-serif" font-size="12.5">included</text>
-    <text x="24" y="325" fill="#C890A6" font-family="'Segoe UI', system-ui, -apple-system, 'Helvetica Neue', sans-serif" font-size="12.5" font-weight="600">proof</text>
-    <text x="116" y="325" fill="#574A50" opacity="0.85" font-family="'Segoe UI', system-ui, -apple-system, 'Helvetica Neue', sans-serif" font-size="12.5">6 live consoles, 183 commits, 15 workflows</text>
+    <text x="116" y="283" fill="#574A50" opacity="0.85" font-family="'Segoe UI', system-ui, -apple-system, 'Helvetica Neue', sans-serif" font-size="12.5">GitHub Actions on every push</text>
+    <text x="24" y="310" fill="#C890A6" font-family="'Segoe UI', system-ui, -apple-system, 'Helvetica Neue', sans-serif" font-size="12.5" font-weight="600">proof</text>
+    <text x="116" y="310" fill="#574A50" opacity="0.85" font-family="'Segoe UI', system-ui, -apple-system, 'Helvetica Neue', sans-serif" font-size="12.5">6 live consoles, 183 commits, 15 workflows</text>
   </g>
 </svg>
