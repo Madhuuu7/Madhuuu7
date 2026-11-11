@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 250" width="1000" height="250" role="img" aria-label="Madhura M R — backend, applied ML, systems that measure themselves">
+  <title>Madhura M R — backend, applied ML, systems that measure themselves</title>
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0.85" y2="1"><stop offset="0" stop-color="#F5E6EE"/><stop offset="0.5" stop-color="#FFFDFB"/><stop offset="1" stop-color="#F5E6EE"/></linearGradient>
+    <linearGradient id="ribbon" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#E0BAC6"/><stop offset="1" stop-color="#C890A6"/></linearGradient>
+  </defs>
+  <rect width="1000" height="250" rx="14" fill="url(#sky)"/>
+  <rect width="1000" height="250" rx="14" fill="none" stroke="#E0BAC6" stroke-width="2"/>
+  <path d="M -10 58 C 120 30, 232 82, 344 52" fill="none" stroke="#E0BAC6" stroke-width="2.4" stroke-linecap="round" opacity="0.8"/>
+  <path d="M 1010 196 C 890 220, 796 170, 700 198" fill="none" stroke="#E0BAC6" stroke-width="2.4" stroke-linecap="round" opacity="0.8"/>
+<g fill="#C890A6" opacity="0.95"><circle cx="72.00" cy="37.41" r="5.40"/><circle cx="78.26" cy="41.95" r="5.40"/><circle cx="75.89" cy="49.35" r="5.40"/><circle cx="68.11" cy="49.35" r="5.40"/><circle cx="65.74" cy="41.95" r="5.40"/><circle cx="72.00" cy="44.00" r="2.27" fill="#FFFDFB"/></g>
+<g fill="#C890A6" opacity="0.8"><circle cx="164.00" cy="52.88" r="4.20"/><circle cx="168.87" cy="56.40" r="4.20"/><circle cx="167.02" cy="62.16" r="4.20"/><circle cx="160.98" cy="62.16" r="4.20"/><circle cx="159.13" cy="56.40" r="4.20"/><circle cx="164.00" cy="58.00" r="1.76" fill="#FFFDFB"/></g>
+<g fill="#C890A6" opacity="0.65"><circle cx="254.00" cy="62.14" r="4.80"/><circle cx="259.57" cy="66.18" r="4.80"/><circle cx="257.46" cy="72.75" r="4.80"/><circle cx="250.54" cy="72.75" r="4.80"/><circle cx="248.43" cy="66.18" r="4.80"/><circle cx="254.00" cy="68.00" r="2.02" fill="#FFFDFB"/></g>
+<g fill="#E0BAC6" opacity="0.6"><circle cx="330.00" cy="41.61" r="3.60"/><circle cx="334.18" cy="44.63" r="3.60"/><circle cx="332.59" cy="49.56" r="3.60"/><circle cx="327.41" cy="49.56" r="3.60"/><circle cx="325.82" cy="44.63" r="3.60"/><circle cx="330.00" cy="46.00" r="1.51" fill="#FFFDFB"/></g>
+<g fill="#C890A6" opacity="0.9"><circle cx="900.00" cy="183.66" r="5.20"/><circle cx="906.03" cy="188.02" r="5.20"/><circle cx="903.74" cy="195.15" r="5.20"/><circle cx="896.26" cy="195.15" r="5.20"/><circle cx="893.97" cy="188.02" r="5.20"/><circle cx="900.00" cy="190.00" r="2.18" fill="#FFFDFB"/></g>
+<g fill="#C890A6" opacity="0.7"><circle cx="812.00" cy="199.12" r="4.00"/><circle cx="816.64" cy="202.48" r="4.00"/><circle cx="814.88" cy="207.96" r="4.00"/><circle cx="809.12" cy="207.96" r="4.00"/><circle cx="807.36" cy="202.48" r="4.00"/><circle cx="812.00" cy="204.00" r="1.68" fill="#FFFDFB"/></g>
+<g fill="#E0BAC6" opacity="0.6"><circle cx="728.00" cy="180.39" r="4.60"/><circle cx="733.34" cy="184.25" r="4.60"/><circle cx="731.31" cy="190.55" r="4.60"/><circle cx="724.69" cy="190.55" r="4.60"/><circle cx="722.66" cy="184.25" r="4.60"/><circle cx="728.00" cy="186.00" r="1.93" fill="#FFFDFB"/></g>
+<g fill="#E0BAC6" opacity="0.5"><circle cx="120.00" cy="164.10" r="3.20"/><circle cx="123.71" cy="166.78" r="3.20"/><circle cx="122.30" cy="171.17" r="3.20"/><circle cx="117.70" cy="171.17" r="3.20"/><circle cx="116.29" cy="166.78" r="3.20"/><circle cx="120.00" cy="168.00" r="1.34" fill="#FFFDFB"/></g>
+<g fill="#E0BAC6" opacity="0.5"><circle cx="946.00" cy="57.85" r="3.40"/><circle cx="949.94" cy="60.71" r="3.40"/><circle cx="948.45" cy="65.37" r="3.40"/><circle cx="943.55" cy="65.37" r="3.40"/><circle cx="942.06" cy="60.71" r="3.40"/><circle cx="946.00" cy="62.00" r="1.43" fill="#FFFDFB"/></g>
+  <text x="500.0" y="56" text-anchor="middle" fill="#574A50" opacity="0.62" font-family="'Segoe UI', system-ui, -apple-system, 'Helvetica Neue', sans-serif" font-size="12.5" letter-spacing="3.2">BENGALURU, INDIA &#183; COMPUTER SCIENCE &#183; 2027</text>
+  <text x="500.0" y="122" text-anchor="middle" fill="#574A50" font-family="Georgia, 'Iowan Old Style', 'Times New Roman', serif" font-size="56" letter-spacing="1.2">Madhura M R</text>
+  <rect x="406.0" y="140" width="188" height="3" rx="1.5" fill="url(#ribbon)"/>
+  <text x="500.0" y="174" text-anchor="middle" fill="#C890A6" font-family="'Segoe UI', system-ui, -apple-system, 'Helvetica Neue', sans-serif" font-size="17.5" font-weight="600" letter-spacing="0.4">Backend &#183; Applied ML &#183; Systems that measure themselves</text>
+  <text x="500.0" y="200" text-anchor="middle" fill="#574A50" opacity="0.78" font-family="'Segoe UI', system-ui, -apple-system, 'Helvetica Neue', sans-serif" font-size="14">Six public systems, each with a console you can open. Growing one commit at a time.</text>
+  <rect x="342.0" y="214" width="316" height="26" rx="13" fill="#F5E6EE" stroke="#E0BAC6" stroke-width="1.5"/>
+<g fill="#C890A6" opacity="1.0"><circle cx="362.00" cy="222.61" r="3.60"/><circle cx="366.18" cy="225.63" r="3.60"/><circle cx="364.59" cy="230.56" r="3.60"/><circle cx="359.41" cy="230.56" r="3.60"/><circle cx="357.82" cy="225.63" r="3.60"/><circle cx="362.00" cy="227.00" r="1.51" fill="#FFFDFB"/></g>
+  <text x="516.0" y="231" text-anchor="middle" fill="#C890A6" font-family="'Segoe UI', system-ui, -apple-system, 'Helvetica Neue', sans-serif" font-size="11.5" letter-spacing="1.1">OPEN TO SOFTWARE &#38; ML INTERNSHIPS</text>
+</svg>

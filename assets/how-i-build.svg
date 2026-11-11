@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 258" width="1000" height="258" role="img" aria-label="How I build — four habits that repeat across the six projects">
+  <title>How I build — four habits that repeat across the six projects</title>
+  <rect width="1000" height="258" rx="12" fill="#FFFDFB"/>
+  <rect width="1000" height="258" rx="12" fill="none" stroke="#E0BAC6" stroke-width="2"/>
+  <text x="26" y="40" fill="#C890A6" font-family="'Segoe UI', system-ui, -apple-system, 'Helvetica Neue', sans-serif" font-size="12" letter-spacing="2.4">madhura@github ~ $ cat how-i-build.md</text>
+  <line x1="26" y1="54" x2="974" y2="54" stroke="#F0DEE6" stroke-width="2"/>
+  <rect x="26" y="70" width="3" height="18" rx="1.5" fill="#C890A6"/>
+  <text x="40" y="86" fill="#574A50" font-family="'Segoe UI', system-ui, -apple-system, 'Helvetica Neue', sans-serif" font-size="14.5" font-weight="600">The benchmark is a test</text>
+  <text x="40" y="106" fill="#574A50" opacity="0.74" font-family="'Segoe UI', system-ui, -apple-system, 'Helvetica Neue', sans-serif" font-size="12.5">relay replays 4,000 requests on every push, revenant re-runs</text>
+  <text x="40" y="122" fill="#574A50" opacity="0.74" font-family="'Segoe UI', system-ui, -apple-system, 'Helvetica Neue', sans-serif" font-size="12.5">all 140 crash scenarios, nanofaas records a session against a</text>
+  <text x="40" y="138" fill="#574A50" opacity="0.74" font-family="'Segoe UI', system-ui, -apple-system, 'Helvetica Neue', sans-serif" font-size="12.5">real Docker daemon. A number cannot quietly go stale.</text>
+  <rect x="526" y="70" width="3" height="18" rx="1.5" fill="#C890A6"/>
+  <text x="540" y="86" fill="#574A50" font-family="'Segoe UI', system-ui, -apple-system, 'Helvetica Neue', sans-serif" font-size="14.5" font-weight="600">A published console is a recording</text>
+  <text x="540" y="106" fill="#574A50" opacity="0.74" font-family="'Segoe UI', system-ui, -apple-system, 'Helvetica Neue', sans-serif" font-size="12.5">Pages runs no Python and no containers, so each page replays</text>
+  <text x="540" y="122" fill="#574A50" opacity="0.74" font-family="'Segoe UI', system-ui, -apple-system, 'Helvetica Neue', sans-serif" font-size="12.5">responses captured from the real service and names the date</text>
+  <text x="540" y="138" fill="#574A50" opacity="0.74" font-family="'Segoe UI', system-ui, -apple-system, 'Helvetica Neue', sans-serif" font-size="12.5">and host they came from.</text>
+  <rect x="26" y="162" width="3" height="18" rx="1.5" fill="#C890A6"/>
+  <text x="40" y="178" fill="#574A50" font-family="'Segoe UI', system-ui, -apple-system, 'Helvetica Neue', sans-serif" font-size="14.5" font-weight="600">The failure path is tested</text>
+  <text x="40" y="198" fill="#574A50" opacity="0.74" font-family="'Segoe UI', system-ui, -apple-system, 'Helvetica Neue', sans-serif" font-size="12.5">a platform reported healthy while its data plane is down, an</text>
+  <text x="40" y="214" fill="#574A50" opacity="0.74" font-family="'Segoe UI', system-ui, -apple-system, 'Helvetica Neue', sans-serif" font-size="12.5">effect that escaped before the log recorded it: those are the</text>
+  <text x="40" y="230" fill="#574A50" opacity="0.74" font-family="'Segoe UI', system-ui, -apple-system, 'Helvetica Neue', sans-serif" font-size="12.5">cases with tests.</text>
+  <rect x="526" y="162" width="3" height="18" rx="1.5" fill="#C890A6"/>
+  <text x="540" y="178" fill="#574A50" font-family="'Segoe UI', system-ui, -apple-system, 'Helvetica Neue', sans-serif" font-size="14.5" font-weight="600">The README states the limits</text>
+  <text x="540" y="198" fill="#574A50" opacity="0.74" font-family="'Segoe UI', system-ui, -apple-system, 'Helvetica Neue', sans-serif" font-size="12.5">no VM isolation, no egress control, a ledger paused because</text>
+  <text x="540" y="214" fill="#574A50" opacity="0.74" font-family="'Segoe UI', system-ui, -apple-system, 'Helvetica Neue', sans-serif" font-size="12.5">its free database expired. A claim is worth more with its</text>
+  <text x="540" y="230" fill="#574A50" opacity="0.74" font-family="'Segoe UI', system-ui, -apple-system, 'Helvetica Neue', sans-serif" font-size="12.5">limits beside it.</text>
+</svg>
