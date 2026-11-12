@@ -9,6 +9,12 @@
   <img src="https://readme-typing-svg.demolab.com?font=Georgia&size=20&duration=3400&pause=900&color=C890A6&center=true&vCenter=true&width=640&height=38&lines=Hey+there%2C+I'm+Madhura+%F0%9F%8C%B8;Growing+one+commit+at+a+time" alt="Hey there, I'm Madhura.">
 </p>
 
+<p align="center">
+  <a href="https://madhura-mr.vercel.app">
+    <img src="https://img.shields.io/badge/%F0%9F%8C%B8%20Portfolio-madhura--mr.vercel.app-C890A6?style=for-the-badge&labelColor=F5E6EE" alt="Portfolio — madhura-mr.vercel.app">
+  </a>
+</p>
+
 <br>
 
 <img src="assets/section-about.svg" alt="01 — About" width="100%">
@@ -106,6 +112,9 @@
 <img src="assets/section-contact.svg" alt="05 — Contact" width="100%">
 
 <p align="center">
+  <a href="https://madhura-mr.vercel.app">
+    <img src="https://img.shields.io/badge/Portfolio-E0BAC6?style=for-the-badge&logo=vercel&logoColor=574A50" alt="Portfolio">
+  </a>
   <a href="https://www.linkedin.com/in/madhura-m-r">
     <img src="https://img.shields.io/badge/LinkedIn-C890A6?style=for-the-badge&logo=linkedin&logoColor=FFFDFB" alt="LinkedIn">
   </a>
