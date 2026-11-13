@@ -1,13 +1,9 @@
 <p align="center">
-  <img src="assets/hero.svg" alt="Madhura M R — full-stack developer, applied ML, distributed systems. Building real-world apps with clean, maintainable code." width="100%">
+  <img src="assets/hero.svg" alt="Madhura M R — full-stack developer, applied ML, distributed systems. Hey there, I'm Madhura. Growing one commit at a time." width="100%">
 </p>
 
 <!-- Prefer your own cherry blossom GIF banner? Swap the line above for:
 <p align="center"><img src="assets/banner.gif" alt="" width="100%"></p> -->
-
-<p align="center">
-  <img src="https://readme-typing-svg.demolab.com?font=Georgia&size=20&duration=3400&pause=900&color=C890A6&center=true&vCenter=true&width=640&height=38&lines=Hey+there%2C+I'm+Madhura+%F0%9F%8C%B8;Growing+one+commit+at+a+time" alt="Hey there, I'm Madhura.">
-</p>
 
 <p align="center">
   <a href="https://madhura-mr.vercel.app">
@@ -23,7 +19,13 @@
 
 <br>
 
-<img src="assets/section-work.svg" alt="02 — The work: six systems, each with a number behind it" width="100%">
+<img src="assets/section-work.svg" alt="02 — The work: seven systems, each with a number behind it" width="100%">
+
+<img src="assets/proof-run.svg" alt="The proof run. revenant: killed at every journal boundary, 140 of 140 recovered. relay: a 4,000-request trace through four policies, p95 down 71.8%. gridcast: 32,391 unseen blocks, 5.07% MAPE. transitlab: 37 times faster than the Python engine it was ported from. verdict: 46.7% against 5.9% false alarms. nanofaas: a cold start 1,028 times a warm call. claimkit: two phones offline on the same field, conflict shown, nothing lost." width="100%">
+
+<p align="center">
+  <a href="https://claimkit-sepia.vercel.app/demo"><img src="assets/card-claimkit.svg" alt="ClaimKit — a family puts one health-insurance claim together from phones with no signal. 266 tests against a real Postgres; two phones edit offline and converge." width="100%"></a>
+</p>
 
 <p align="center">
   <a href="https://madhuuu7.github.io/gridcast/"><img src="assets/card-gridcast.svg" alt="gridcast — 5.07% MAPE across 32,391 out-of-sample blocks" width="49%"></a>
@@ -41,7 +43,8 @@
 </p>
 
 <p align="center">
-  <b>Open a console:</b>
+  <b>Open one:</b>
+  <a href="https://claimkit-sepia.vercel.app/demo">claimkit</a> ·
   <a href="https://madhuuu7.github.io/gridcast/">gridcast</a> ·
   <a href="https://madhuuu7.github.io/relay-llm-gateway/">relay</a> ·
   <a href="https://madhuuu7.github.io/revenant/">revenant</a> ·
@@ -50,6 +53,7 @@
   <a href="https://madhuuu7.github.io/nanofaas/">nanofaas</a>
   <br>
   <b>Read the source:</b>
+  <a href="https://github.com/Madhuuu7/claimkit">claimkit</a> ·
   <a href="https://github.com/Madhuuu7/gridcast">gridcast</a> ·
   <a href="https://github.com/Madhuuu7/relay-llm-gateway">relay</a> ·
   <a href="https://github.com/Madhuuu7/revenant">revenant</a> ·
@@ -59,6 +63,7 @@
 </p>
 
 <p align="center">
+  <img src="https://img.shields.io/github/actions/workflow/status/Madhuuu7/claimkit/ci.yml?style=flat-square&label=claimkit&labelColor=F5E6EE&color=C890A6" alt="">
   <img src="https://img.shields.io/github/actions/workflow/status/Madhuuu7/gridcast/tests.yml?style=flat-square&label=gridcast&labelColor=F5E6EE&color=C890A6" alt="">
   <img src="https://img.shields.io/github/actions/workflow/status/Madhuuu7/relay-llm-gateway/tests.yml?style=flat-square&label=relay&labelColor=F5E6EE&color=C890A6" alt="">
   <img src="https://img.shields.io/github/actions/workflow/status/Madhuuu7/revenant/tests.yml?style=flat-square&label=revenant&labelColor=F5E6EE&color=C890A6" alt="">
@@ -87,9 +92,9 @@
 
 <img src="assets/section-counted.svg" alt="04 — Counted" width="100%">
 
-<img src="assets/counted.svg" alt="8 public projects, 6 live consoles, 183 commits, 15 CI workflows. 61.5% Python, 14.5% TypeScript." width="100%">
+<img src="assets/counted.svg" alt="9 public projects, 7 live, 232 commits, 16 CI workflows. 50.4% Python, 26.7% TypeScript." width="100%">
 
-<img src="assets/contributions.svg" alt="216 contributions in the last year, across 18 days" width="100%">
+<img src="assets/contributions.svg" alt="The contribution calendar for the last year" width="100%">
 
 <p align="center">
   <img src="https://img.shields.io/badge/Python-C890A6?style=flat-square&logo=python&logoColor=FFFDFB" alt="Python">
@@ -105,6 +110,8 @@
   <img src="https://img.shields.io/badge/GitHub%20Actions-C890A6?style=flat-square&logo=githubactions&logoColor=FFFDFB" alt="GitHub Actions">
   <img src="https://img.shields.io/badge/Solidity-E0BAC6?style=flat-square&logo=solidity&logoColor=574A50" alt="Solidity">
   <img src="https://img.shields.io/badge/Vite-C890A6?style=flat-square&logo=vite&logoColor=FFFDFB" alt="Vite">
+  <img src="https://img.shields.io/badge/Next.js-E0BAC6?style=flat-square&logo=nextdotjs&logoColor=574A50" alt="Next.js">
+  <img src="https://img.shields.io/badge/Prisma-C890A6?style=flat-square&logo=prisma&logoColor=FFFDFB" alt="Prisma">
 </p>
 
 <br>

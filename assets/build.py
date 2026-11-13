@@ -8,6 +8,13 @@ Everything here is a static SVG committed to the repository. The profile does
 not depend on a third-party card service: while this was being written, the
 one most profiles use was answering DEPLOYMENT_PAUSED, which leaves broken
 images in the middle of the page it was supposed to decorate.
+
+Some panels move. GitHub serves a README image as a sandboxed SVG: no script
+runs, but CSS keyframes and SMIL do, so the petals, the typed line and the
+proof run are animation written into the file itself. Every animated element
+is drawn in its finished state first and only then animated, so a reader who
+has asked for reduced motion -- or a renderer that ignores the animation --
+sees the complete panel rather than an empty one.
 """
 
 from __future__ import annotations
@@ -85,8 +92,51 @@ def write(name: str, content: str) -> None:
 # -- 1. the hero -----------------------------------------------------------
 
 
+def petal(x: float, delay: float, duration: float, drift: float, size: float,
+          fill: str) -> str:
+    """One falling petal: a teardrop that drifts sideways as it turns."""
+    return (
+        f'  <g class="petal" style="animation-delay:{delay}s;animation-duration:{duration}s;'
+        f'--drift:{drift}px">'
+        f'<path transform="translate({x} -14) scale({size})" '
+        f'd="M0 0 C 5 -7, 12 -2, 8 6 C 6 10, 1 9, 0 0 Z" fill="{fill}"/></g>'
+    )
+
+
+TYPED = "Hey there, I'm Madhura. Growing one commit at a time."
+
+
 def hero() -> str:
-    h = 222
+    h = 262
+    # The typed line is real text under a clip that opens in steps, one
+    # character at a time. Georgia is not monospaced, so the clip is a hair
+    # ahead or behind a letter mid-way -- which reads as typing, not as a bug.
+    type_w = 460
+    type_x = W / 2 - type_w / 2
+    steps = len(TYPED)
+    style = f'''  <style>
+    .petal {{ opacity: 0; animation-name: fall; animation-timing-function: linear;
+              animation-iteration-count: infinite; }}
+    @keyframes fall {{
+      0%   {{ opacity: 0; transform: translate(0, 0) rotate(0deg); }}
+      8%   {{ opacity: .85; }}
+      85%  {{ opacity: .7; }}
+      100% {{ opacity: 0; transform: translate(var(--drift), {h + 30}px) rotate(300deg); }}
+    }}
+    .reveal {{ transform-origin: {type_x}px 0; animation: type 11s steps({steps}, end) infinite; }}
+    @keyframes type {{
+      0%, 4%    {{ transform: scaleX(0); }}
+      38%, 94%  {{ transform: scaleX(1); }}
+      100%      {{ transform: scaleX(0); }}
+    }}
+    .caret {{ animation: blink 1s steps(1, end) infinite; }}
+    @keyframes blink {{ 50% {{ opacity: 0; }} }}
+    .rule {{ transform-origin: {W / 2}px 0; animation: draw 11s ease-out infinite; }}
+    @keyframes draw {{ 0% {{ transform: scaleX(0); }} 9%, 100% {{ transform: scaleX(1); }} }}
+    @media (prefers-reduced-motion: reduce) {{
+      .petal, .reveal, .caret, .rule {{ animation: none; }}
+    }}
+  </style>'''
     body = [
         '  <defs>',
         f'    <linearGradient id="sky" x1="0" y1="0" x2="0.85" y2="1">'
@@ -94,23 +144,39 @@ def hero() -> str:
         f'<stop offset="1" stop-color="{PAPER}"/></linearGradient>',
         f'    <linearGradient id="ribbon" x1="0" y1="0" x2="1" y2="0">'
         f'<stop offset="0" stop-color="{ROSE}"/><stop offset="1" stop-color="{DUSTY}"/></linearGradient>',
+        f'    <clipPath id="frame"><rect width="{W}" height="{h}" rx="14"/></clipPath>',
+        f'    <clipPath id="typing"><rect class="reveal" x="{type_x}" y="212" '
+        f'width="{type_w}" height="34"/></clipPath>',
         '  </defs>',
+        style,
         f'  <rect width="{W}" height="{h}" rx="14" fill="url(#sky)"/>',
-        f'  <rect width="{W}" height="{h}" rx="14" fill="none" stroke="{ROSE}" stroke-width="2"/>',
         # two branches, one high left, one low right
         f'  <path d="M -10 58 C 120 30, 232 82, 344 52" fill="none" stroke="{ROSE}" '
         f'stroke-width="2.4" stroke-linecap="round" opacity="0.8"/>',
-        f'  <path d="M 1012 186 C 964 206, 920 174, 876 196" fill="none" stroke="{ROSE}" '
+        f'  <path d="M 1012 226 C 964 246, 920 214, 876 236" fill="none" stroke="{ROSE}" '
         f'stroke-width="2.4" stroke-linecap="round" opacity="0.8"/>',
         blossom(72, 44, 5.4, DUSTY, 0.95),
         blossom(164, 58, 4.2, DUSTY, 0.8),
         blossom(254, 68, 4.8, DUSTY, 0.65),
         blossom(330, 46, 3.6, ROSE, 0.6),
-        blossom(986, 190, 5.2, DUSTY, 0.9),
-        blossom(936, 196, 4.0, DUSTY, 0.7),
-        blossom(886, 190, 4.6, ROSE, 0.6),
-        blossom(62, 186, 3.2, ROSE, 0.5),
+        blossom(986, 230, 5.2, DUSTY, 0.9),
+        blossom(936, 236, 4.0, DUSTY, 0.7),
+        blossom(886, 230, 4.6, ROSE, 0.6),
+        blossom(62, 226, 3.2, ROSE, 0.5),
         blossom(946, 62, 3.4, ROSE, 0.5),
+        # the petals the branches let go of, kept inside the frame
+        '  <g clip-path="url(#frame)">',
+        petal(90, 0.0, 13, 150, 1.0, DUSTY),
+        petal(210, 4.5, 16, 110, 0.8, ROSE),
+        petal(300, 9.0, 12, 190, 1.1, DUSTY),
+        petal(430, 2.2, 17, -60, 0.7, ROSE),
+        petal(560, 7.4, 14, 120, 0.9, DUSTY),
+        petal(680, 11.5, 15, -90, 1.0, ROSE),
+        petal(780, 1.2, 18, 80, 0.75, DUSTY),
+        petal(880, 6.1, 13, -140, 1.05, ROSE),
+        petal(960, 10.2, 16, -200, 0.85, DUSTY),
+        '  </g>',
+        f'  <rect width="{W}" height="{h}" rx="14" fill="none" stroke="{ROSE}" stroke-width="2"/>',
         # the eyebrow
         f'  <text x="{W/2}" y="56" text-anchor="middle" fill="{INK}" opacity="0.62" '
         f'font-family="{SANS}" font-size="12.5" letter-spacing="3.2">'
@@ -118,17 +184,22 @@ def hero() -> str:
         # the name
         f'  <text x="{W/2}" y="122" text-anchor="middle" fill="{INK}" '
         f'font-family="{SERIF}" font-size="56" letter-spacing="1.2">Madhura M R</text>',
-        f'  <rect x="{W/2 - 94}" y="140" width="188" height="3" rx="1.5" fill="url(#ribbon)"/>',
+        f'  <rect class="rule" x="{W/2 - 94}" y="140" width="188" height="3" rx="1.5" fill="url(#ribbon)"/>',
         # the role line
         f'  <text x="{W/2}" y="174" text-anchor="middle" fill="{DUSTY}" '
         f'font-family="{SANS}" font-size="17.5" font-weight="600" letter-spacing="0.4">'
         f'Full-Stack Developer &#183; Applied ML &#183; Distributed Systems</text>',
         f'  <text x="{W/2}" y="200" text-anchor="middle" fill="{INK}" opacity="0.78" '
         f'font-family="{SANS}" font-size="14">'
-        f'Building real-world apps with clean, maintainable code &#8212; six of them live, '
-        f'each with a console you can open.</text>',
+        f'Building real-world apps with clean, maintainable code &#8212; seven of them live, '
+        f'each one you can open.</text>',
+        # the typed line, which used to be an image from somebody else's server
+        f'  <text x="{W/2}" y="236" text-anchor="middle" fill="{DUSTY}" clip-path="url(#typing)" '
+        f'font-family="{SERIF}" font-size="18" font-style="italic">'
+        f'{esc(TYPED)}</text>',
     ]
-    return svg(W, h, "\n".join(body), "Madhura M R — backend, applied ML, systems that measure themselves")
+    return svg(W, h, "\n".join(body),
+               "Madhura M R — full-stack developer, applied ML, distributed systems")
 
 
 # -- 2. section bars -------------------------------------------------------
@@ -161,12 +232,12 @@ ABOUT_POINTS = [
 WHOAMI = [
     ("focus", "End-to-end web apps: API, data model, UI, and the CI that ships them"),
     ("languages", "Python, TypeScript, SQL, a little Solidity"),
-    ("ml", "scikit-learn, pandas, NumPy, conformal prediction"),
+    ("ml", "scikit-learn, pandas, conformal prediction"),
     ("backend", "FastAPI, asyncio, Postgres, MongoDB, Docker"),
-    ("frontend", "React, Vite, hand-written SVG when a chart has to be honest"),
-    ("testing", "pytest and vitest, on every push"),
-    ("ci", "GitHub Actions on every push"),
-    ("proof", "6 live consoles, 183 commits, 15 workflows"),
+    ("frontend", "React, Vite, hand-written SVG charts"),
+    ("testing", "pytest, vitest, Playwright, on every push"),
+    ("full stack", "Next.js, Prisma, offline-first sync"),
+    ("proof", "7 live, 232 commits, 16 workflows"),
 ]
 
 
@@ -185,7 +256,7 @@ def about() -> str:
     for i, line in enumerate(wrap("I build systems that check their own claims.", 26)):
         body.append(f'  <text x="26" y="{82 + i * 30}" fill="{INK}" font-family="{SERIF}" '
                     f'font-size="25">{esc(line)}</text>')
-    y = 162
+    y = 158
     for title, detail in ABOUT_POINTS:
         body.append(blossom(33, y - 4, 4.4, DUSTY, 0.9))
         body.append(f'  <text x="48" y="{y}" fill="{INK}" font-family="{SANS}" font-size="14" '
@@ -193,7 +264,7 @@ def about() -> str:
         for j, line in enumerate(wrap(detail, 48)):
             body.append(f'  <text x="48" y="{y + 18 + j * 16}" fill="{INK}" opacity="0.72" '
                         f'font-family="{SANS}" font-size="12.5">{esc(line)}</text>')
-        y += 50
+        y += 55
 
     # right card: whoami
     body.append(f'  <g transform="translate({right_x} 0)">')
@@ -288,6 +359,186 @@ def project_card(spec: dict) -> str:
                f'{spec["name"]} — {spec["figure"]}, {spec["caption"]}')
 
 
+# -- 4b. the newest one, drawn wide ----------------------------------------
+
+CLAIMKIT = {
+    "eyebrow": "07 · FULL STACK · THE NEWEST",
+    "name": "ClaimKit",
+    "line": "A family puts one health-insurance claim together, from phones in a "
+            "hospital corridor with no signal.",
+    "figure": "266",
+    "caption": "tests against a real Postgres. Two phones edit offline, and both end up "
+               "with the same claim.",
+    "tags": ["TypeScript", "Next.js", "Postgres", "Prisma", "Playwright"],
+}
+
+
+def claimkit_card() -> str:
+    """ClaimKit, with the thing it does drawn beside it.
+
+    Two phones each make an edit with no signal, the edits wait, and then both
+    reach the log and come back to the other phone. The dots are SMIL motion
+    along the same paths the lines are drawn on, so the picture cannot show a
+    route the diagram does not have.
+    """
+    w, h = W, 214
+    spec = CLAIMKIT
+    body = [
+        f'  <rect width="{w}" height="{h}" rx="12" fill="{CREAM}"/>',
+        f'  <rect width="{w}" height="{h}" rx="12" fill="none" stroke="{ROSE}" stroke-width="2"/>',
+        f'  <rect x="0" y="0" width="{w}" height="4" rx="2" fill="{DUSTY}" opacity="0.55"/>',
+        f'  <text x="24" y="34" fill="{DUSTY}" font-family="{SANS}" font-size="10.5" '
+        f'letter-spacing="2">{esc(spec["eyebrow"])}</text>',
+        f'  <text x="24" y="62" fill="{INK}" font-family="{SERIF}" font-size="26">{esc(spec["name"])}</text>',
+    ]
+    for i, line in enumerate(wrap(spec["line"], 62)):
+        body.append(f'  <text x="24" y="{86 + i * 17}" fill="{INK}" opacity="0.76" '
+                    f'font-family="{SANS}" font-size="12.5">{esc(line)}</text>')
+    body.append(f'  <line x1="24" y1="122" x2="520" y2="122" stroke="{HAIR}" stroke-width="2"/>')
+    body.append(f'  <text x="24" y="156" fill="{DUSTY}" font-family="{SERIF}" '
+                f'font-size="30">{esc(spec["figure"])}</text>')
+    for i, line in enumerate(wrap(spec["caption"], 58)):
+        body.append(f'  <text x="96" y="{144 + i * 15}" fill="{INK}" opacity="0.72" '
+                    f'font-family="{SANS}" font-size="11.5">{esc(line)}</text>')
+    x = 24
+    for tag in spec["tags"]:
+        tw = 13 + len(tag) * 6.4
+        body.append(f'  <rect x="{x:.0f}" y="178" width="{tw:.0f}" height="20" rx="10" '
+                    f'fill="{PAPER}" stroke="{ROSE}" stroke-width="1"/>')
+        body.append(f'  <text x="{x + tw/2:.0f}" y="192" text-anchor="middle" fill="{INK}" '
+                    f'opacity="0.8" font-family="{SANS}" font-size="10.5">{esc(tag)}</text>')
+        x += tw + 7
+
+    # the diagram: phone, log, phone
+    ax, bx, ly = 604, 908, 44           # phone A, phone B, top of the log
+    lx = (ax + bx) / 2 + 18             # the log's centre line
+    up_a = f"M {ax + 36} 118 C {ax + 90} 118, {lx - 70} 78, {lx - 34} 78"
+    up_b = f"M {bx} 118 C {bx - 54} 118, {lx + 70} 78, {lx + 34} 78"
+
+    def phone(px: float, who: str) -> str:
+        return (
+            f'  <g><rect x="{px}" y="72" width="36" height="92" rx="7" fill="{PAPER}" '
+            f'stroke="{ROSE}" stroke-width="2"/>'
+            f'<rect x="{px + 7}" y="84" width="22" height="3" rx="1.5" fill="{ROSE}"/>'
+            f'<rect x="{px + 7}" y="93" width="16" height="3" rx="1.5" fill="{ROSE}" opacity=".7"/>'
+            f'<rect x="{px + 7}" y="102" width="20" height="3" rx="1.5" fill="{ROSE}" opacity=".5"/>'
+            f'<circle cx="{px + 18}" cy="152" r="3" fill="{ROSE}"/>'
+            f'<text x="{px + 18}" y="184" text-anchor="middle" fill="{INK}" opacity=".7" '
+            f'font-family="{SANS}" font-size="10.5">{who}</text></g>'
+        )
+
+    body.append(phone(ax, "phone A"))
+    body.append(phone(bx, "phone B"))
+    for k in range(3):
+        body.append(f'  <rect x="{lx - 34}" y="{ly + 22 + k * 14}" width="68" height="10" rx="3" '
+                    f'fill="{PAPER}" stroke="{ROSE}" stroke-width="1.5"/>')
+    body.append(f'  <text x="{lx}" y="{ly + 10}" text-anchor="middle" fill="{INK}" opacity=".7" '
+                f'font-family="{SANS}" font-size="10.5">one ordered log</text>')
+    for d in (up_a, up_b):
+        body.append(f'  <path d="{d}" fill="none" stroke="{ROSE}" stroke-width="1.6" '
+                    f'stroke-dasharray="3 5" stroke-linecap="round"/>')
+
+    def dot(path: str, begin: str, back: bool, colour: str) -> str:
+        points = ' keyPoints="1;0" keyTimes="0;1" calcMode="linear"' if back else ""
+        return (
+            f'  <circle r="4.2" fill="{colour}" opacity="0">'
+            f'<animateMotion dur="2.2s" begin="{begin}" repeatCount="indefinite" '
+            f'path="{path}"{points}/>'
+            f'<animate attributeName="opacity" values="0;1;1;0" keyTimes="0;.1;.85;1" '
+            f'dur="2.2s" begin="{begin}" repeatCount="indefinite"/></circle>'
+        )
+
+    body.append(dot(up_a, "0s", False, DUSTY))       # A's edit goes up
+    body.append(dot(up_b, "0.5s", False, "#A9718A"))  # B's edit goes up
+    body.append(dot(up_b, "1.1s", True, DUSTY))      # A's edit arrives at B
+    body.append(dot(up_a, "1.6s", True, "#A9718A"))   # B's edit arrives at A
+    body.append(f'  <text x="{lx}" y="{h - 22}" text-anchor="middle" fill="{DUSTY}" '
+                f'font-family="{SANS}" font-size="11.5" font-weight="600">'
+                f'edited offline &#8594; queued &#8594; converged</text>')
+    return svg(w, h, "\n".join(body),
+               "ClaimKit — 266 tests; two phones edit offline and converge on one claim")
+
+
+# -- 4c. the proof run -----------------------------------------------------
+
+# Each row is a claim, what was done to it, and what came back. Every figure
+# here is one a test in that repository produces; none of them is typed in
+# from memory, and a row whose test stops passing should come off this list.
+PROOFS = [
+    ("revenant", "killed at every one of its journal boundaries", "140 / 140 recovered"),
+    ("relay", "replayed a 4,000-request trace through four policies", "p95 down 71.8%"),
+    ("gridcast", "scored on 32,391 blocks it never trained on", "5.07% MAPE"),
+    ("transitlab", "raced against the Python engine it was ported from", "37x faster"),
+    ("verdict", "re-tested every case, against looking once", "46.7% vs 5.9% false alarms"),
+    ("nanofaas", "timed a cold start against a warm call", "1,028x apart"),
+    ("claimkit", "two phones, no signal, the same field", "conflict shown, nothing lost"),
+]
+
+
+def proof_run() -> str:
+    """A terminal that runs the claims, one line at a time, and starts over.
+
+    The rows are plain text in their final positions; the animation only
+    fades each one in on a stagger. With motion reduced the whole run is
+    simply there, which is the version a screenshot would want anyway.
+    """
+    row_h, top = 30, 92
+    h = top + len(PROOFS) * row_h + 58
+    cycle = 16.0
+    rules = []
+    for i in range(len(PROOFS) + 1):
+        start = 4 + i * 9          # percent of the cycle at which row i appears
+        rules.append(
+            f"    .r{i} {{ animation: r{i} {cycle}s linear infinite; }}\n"
+            f"    @keyframes r{i} {{ 0%, {start}% {{ opacity: 0; }} "
+            f"{start + 3}%, 94% {{ opacity: 1; }} 100% {{ opacity: 0; }} }}"
+        )
+    style = (
+        "  <style>\n" + "\n".join(rules) + "\n"
+        "    .cur { animation: cur 1s steps(1, end) infinite; }\n"
+        "    @keyframes cur { 50% { opacity: 0; } }\n"
+        "    @media (prefers-reduced-motion: reduce) { [class] { animation: none; } }\n"
+        "  </style>"
+    )
+    body = [card(W, h), style]
+    # three window dots, because it is a terminal and should look like one
+    for k, tone in enumerate((ROSE, "#EBD2DC", DUSTY)):
+        body.append(f'  <circle cx="{34 + k * 16}" cy="30" r="5" fill="{tone}"/>')
+    body.append(f'  <text x="96" y="35" fill="{DUSTY}" font-family="{SANS}" font-size="12.5" '
+                f'letter-spacing="1.2">madhura@github ~ $ ./prove.sh</text>')
+    body.append(f'  <rect class="cur" x="322" y="23" width="8" height="15" fill="{DUSTY}" opacity=".7"/>')
+    body.append(f'  <line x1="26" y1="52" x2="{W - 26}" y2="52" stroke="{HAIR}" stroke-width="2"/>')
+    body.append(f'  <text x="40" y="76" fill="{INK}" opacity=".55" font-family="{SANS}" '
+                f'font-size="11" letter-spacing="1.6">CLAIM</text>')
+    body.append(f'  <text x="168" y="76" fill="{INK}" opacity=".55" font-family="{SANS}" '
+                f'font-size="11" letter-spacing="1.6">WHAT WAS DONE TO IT</text>')
+    body.append(f'  <text x="{W - 40}" y="76" text-anchor="end" fill="{INK}" opacity=".55" '
+                f'font-family="{SANS}" font-size="11" letter-spacing="1.6">WHAT CAME BACK</text>')
+    for i, (name, did, got) in enumerate(PROOFS):
+        y = top + i * row_h + 18
+        body.append(f'  <g class="r{i}">')
+        if i:
+            body.append(f'    <line x1="40" y1="{y - 20}" x2="{W - 40}" y2="{y - 20}" '
+                        f'stroke="{HAIR}" stroke-width="1.5"/>')
+        body.append(f'    <path d="M {40} {y - 5} l 4 4 l 8 -9" fill="none" stroke="{DUSTY}" '
+                    f'stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>')
+        body.append(f'    <text x="62" y="{y}" fill="{INK}" font-family="{SERIF}" '
+                    f'font-size="16">{esc(name)}</text>')
+        body.append(f'    <text x="168" y="{y}" fill="{INK}" opacity=".76" font-family="{SANS}" '
+                    f'font-size="13">{esc(did)}</text>')
+        body.append(f'    <text x="{W - 40}" y="{y}" text-anchor="end" fill="{DUSTY}" '
+                    f'font-family="{SANS}" font-size="13.5" font-weight="600">{esc(got)}</text>')
+        body.append('  </g>')
+    fy = top + len(PROOFS) * row_h + 30
+    last = len(PROOFS)
+    body.append(f'  <g class="r{last}">'
+                f'<text x="40" y="{fy}" fill="{INK}" opacity=".78" font-family="{SANS}" '
+                f'font-size="13">{len(PROOFS)} claims, {len(PROOFS)} checked. '
+                f'Each one is a test that runs in CI, not a sentence in a README.</text></g>')
+    return svg(W, h, "\n".join(body),
+               "The proof run: seven claims, what was done to each, and what came back")
+
+
 # -- 5. how I build --------------------------------------------------------
 
 HABITS = [
@@ -323,15 +574,15 @@ def habits() -> str:
         for j, line in enumerate(wrap(detail, 62)):
             body.append(f'  <text x="{cx + 14}" y="{cy + 20 + j * 16}" fill="{INK}" opacity="0.74" '
                         f'font-family="{SANS}" font-size="12.5">{esc(line)}</text>')
-    return svg(W, h, "\n".join(body), "How I build — four habits that repeat across the six projects")
+    return svg(W, h, "\n".join(body), "How I build — four habits that repeat across the projects")
 
 
 # -- 6. the counted card ---------------------------------------------------
 
-FIGURES = [("8", "public projects"), ("6", "live consoles"),
-           ("183", "commits"), ("15", "CI workflows")]
-LANGS = [("Python", 61.5, DUSTY), ("TypeScript", 14.5, ROSE), ("JavaScript", 13.9, "#D9A7B8"),
-         ("HTML", 7.6, "#EBD2DC"), ("CSS", 1.9, "#C9ADB8"), ("Solidity", 0.6, "#B58AA0")]
+FIGURES = [("9", "public projects"), ("7", "live, open to click"),
+           ("232", "commits"), ("16", "CI workflows")]
+LANGS = [("Python", 50.4, DUSTY), ("TypeScript", 26.7, ROSE), ("JavaScript", 11.1, "#D9A7B8"),
+         ("HTML", 9.3, "#EBD2DC"), ("CSS", 2.1, "#C9ADB8"), ("Solidity", 0.4, "#B58AA0")]
 
 
 def counted() -> str:
@@ -366,7 +617,7 @@ def counted() -> str:
                 f'font-family="{SANS}" font-size="11.5">counted from the repositories, '
                 f'not from a service that might be down</text>')
     return svg(W, h, "\n".join(body),
-               "8 public projects, 6 live consoles, 183 commits, 15 CI workflows; 61.5% Python")
+               "9 public projects, 7 live, 232 commits, 16 CI workflows; 50.4% Python")
 
 
 # -- 7. the contribution year ---------------------------------------------
@@ -509,8 +760,8 @@ def footer() -> str:
 
 SECTIONS = [
     ("section-about.svg", "01", "About", "Who I am, and what I optimise for."),
-    ("section-work.svg", "02", "The work", "Six systems, each with a number behind it."),
-    ("section-build.svg", "03", "How I build", "The habits that repeat across all six."),
+    ("section-work.svg", "02", "The work", "Seven systems, each with a number behind it."),
+    ("section-build.svg", "03", "How I build", "The habits that repeat across all of them."),
     ("section-counted.svg", "04", "Counted", "Measured from the repositories themselves."),
     ("section-contact.svg", "05", "Contact", "Happy to talk about any of it."),
 ]
@@ -522,6 +773,8 @@ def main() -> None:
     for name, number, title, subtitle in SECTIONS:
         write(name, section(number, title, subtitle))
     write("about.svg", about())
+    write("proof-run.svg", proof_run())
+    write("card-claimkit.svg", claimkit_card())
     for spec in PROJECTS:
         write(spec["file"], project_card(spec))
     write("how-i-build.svg", habits())

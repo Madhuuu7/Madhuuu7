@@ -5,18 +5,18 @@
   <text x="26" y="40" fill="#C890A6" font-family="'Segoe UI', system-ui, -apple-system, 'Helvetica Neue', sans-serif" font-size="11.5" letter-spacing="2.4">WHAT I OPTIMISE FOR</text>
   <text x="26" y="82" fill="#574A50" font-family="Georgia, 'Iowan Old Style', 'Times New Roman', serif" font-size="25">I build systems that check</text>
   <text x="26" y="112" fill="#574A50" font-family="Georgia, 'Iowan Old Style', 'Times New Roman', serif" font-size="25">their own claims.</text>
-<g fill="#C890A6" opacity="0.9"><circle cx="33.00" cy="152.63" r="4.40"/><circle cx="38.10" cy="156.33" r="4.40"/><circle cx="36.17" cy="162.36" r="4.40"/><circle cx="29.83" cy="162.36" r="4.40"/><circle cx="27.90" cy="156.33" r="4.40"/><circle cx="33.00" cy="158.00" r="1.85" fill="#FFFDFB"/></g>
-  <text x="48" y="162" fill="#574A50" font-family="'Segoe UI', system-ui, -apple-system, 'Helvetica Neue', sans-serif" font-size="14" font-weight="600">Measure, do not assert</text>
-  <text x="48" y="180" fill="#574A50" opacity="0.72" font-family="'Segoe UI', system-ui, -apple-system, 'Helvetica Neue', sans-serif" font-size="12.5">every claim in these repositories has a run</text>
-  <text x="48" y="196" fill="#574A50" opacity="0.72" font-family="'Segoe UI', system-ui, -apple-system, 'Helvetica Neue', sans-serif" font-size="12.5">behind it</text>
-<g fill="#C890A6" opacity="0.9"><circle cx="33.00" cy="202.63" r="4.40"/><circle cx="38.10" cy="206.33" r="4.40"/><circle cx="36.17" cy="212.36" r="4.40"/><circle cx="29.83" cy="212.36" r="4.40"/><circle cx="27.90" cy="206.33" r="4.40"/><circle cx="33.00" cy="208.00" r="1.85" fill="#FFFDFB"/></g>
-  <text x="48" y="212" fill="#574A50" font-family="'Segoe UI', system-ui, -apple-system, 'Helvetica Neue', sans-serif" font-size="14" font-weight="600">Test the failure</text>
-  <text x="48" y="230" fill="#574A50" opacity="0.72" font-family="'Segoe UI', system-ui, -apple-system, 'Helvetica Neue', sans-serif" font-size="12.5">the crash, the dead dependency, the judge that</text>
-  <text x="48" y="246" fill="#574A50" opacity="0.72" font-family="'Segoe UI', system-ui, -apple-system, 'Helvetica Neue', sans-serif" font-size="12.5">cannot rule</text>
-<g fill="#C890A6" opacity="0.9"><circle cx="33.00" cy="252.63" r="4.40"/><circle cx="38.10" cy="256.33" r="4.40"/><circle cx="36.17" cy="262.36" r="4.40"/><circle cx="29.83" cy="262.36" r="4.40"/><circle cx="27.90" cy="256.33" r="4.40"/><circle cx="33.00" cy="258.00" r="1.85" fill="#FFFDFB"/></g>
-  <text x="48" y="262" fill="#574A50" font-family="'Segoe UI', system-ui, -apple-system, 'Helvetica Neue', sans-serif" font-size="14" font-weight="600">State the limits</text>
-  <text x="48" y="280" fill="#574A50" opacity="0.72" font-family="'Segoe UI', system-ui, -apple-system, 'Helvetica Neue', sans-serif" font-size="12.5">each README says what the project cannot do,</text>
-  <text x="48" y="296" fill="#574A50" opacity="0.72" font-family="'Segoe UI', system-ui, -apple-system, 'Helvetica Neue', sans-serif" font-size="12.5">next to what it can</text>
+<g fill="#C890A6" opacity="0.9"><circle cx="33.00" cy="148.63" r="4.40"/><circle cx="38.10" cy="152.33" r="4.40"/><circle cx="36.17" cy="158.36" r="4.40"/><circle cx="29.83" cy="158.36" r="4.40"/><circle cx="27.90" cy="152.33" r="4.40"/><circle cx="33.00" cy="154.00" r="1.85" fill="#FFFDFB"/></g>
+  <text x="48" y="158" fill="#574A50" font-family="'Segoe UI', system-ui, -apple-system, 'Helvetica Neue', sans-serif" font-size="14" font-weight="600">Measure, do not assert</text>
+  <text x="48" y="176" fill="#574A50" opacity="0.72" font-family="'Segoe UI', system-ui, -apple-system, 'Helvetica Neue', sans-serif" font-size="12.5">every claim in these repositories has a run</text>
+  <text x="48" y="192" fill="#574A50" opacity="0.72" font-family="'Segoe UI', system-ui, -apple-system, 'Helvetica Neue', sans-serif" font-size="12.5">behind it</text>
+<g fill="#C890A6" opacity="0.9"><circle cx="33.00" cy="203.63" r="4.40"/><circle cx="38.10" cy="207.33" r="4.40"/><circle cx="36.17" cy="213.36" r="4.40"/><circle cx="29.83" cy="213.36" r="4.40"/><circle cx="27.90" cy="207.33" r="4.40"/><circle cx="33.00" cy="209.00" r="1.85" fill="#FFFDFB"/></g>
+  <text x="48" y="213" fill="#574A50" font-family="'Segoe UI', system-ui, -apple-system, 'Helvetica Neue', sans-serif" font-size="14" font-weight="600">Test the failure</text>
+  <text x="48" y="231" fill="#574A50" opacity="0.72" font-family="'Segoe UI', system-ui, -apple-system, 'Helvetica Neue', sans-serif" font-size="12.5">the crash, the dead dependency, the judge that</text>
+  <text x="48" y="247" fill="#574A50" opacity="0.72" font-family="'Segoe UI', system-ui, -apple-system, 'Helvetica Neue', sans-serif" font-size="12.5">cannot rule</text>
+<g fill="#C890A6" opacity="0.9"><circle cx="33.00" cy="258.63" r="4.40"/><circle cx="38.10" cy="262.33" r="4.40"/><circle cx="36.17" cy="268.36" r="4.40"/><circle cx="29.83" cy="268.36" r="4.40"/><circle cx="27.90" cy="262.33" r="4.40"/><circle cx="33.00" cy="264.00" r="1.85" fill="#FFFDFB"/></g>
+  <text x="48" y="268" fill="#574A50" font-family="'Segoe UI', system-ui, -apple-system, 'Helvetica Neue', sans-serif" font-size="14" font-weight="600">State the limits</text>
+  <text x="48" y="286" fill="#574A50" opacity="0.72" font-family="'Segoe UI', system-ui, -apple-system, 'Helvetica Neue', sans-serif" font-size="12.5">each README says what the project cannot do,</text>
+  <text x="48" y="302" fill="#574A50" opacity="0.72" font-family="'Segoe UI', system-ui, -apple-system, 'Helvetica Neue', sans-serif" font-size="12.5">next to what it can</text>
   <g transform="translate(472 0)">
     <rect width="528" height="332" rx="12" fill="#FFFDFB"/><rect width="528" height="332" rx="12" fill="none" stroke="#E0BAC6" stroke-width="2"/>
     <text x="24" y="36" fill="#C890A6" font-family="'Segoe UI', system-ui, -apple-system, 'Helvetica Neue', sans-serif" font-size="12.5">madhura@github ~ $ whoami</text>
@@ -27,18 +27,16 @@
     <text x="24" y="118" fill="#C890A6" font-family="'Segoe UI', system-ui, -apple-system, 'Helvetica Neue', sans-serif" font-size="12.5" font-weight="600">languages</text>
     <text x="116" y="118" fill="#574A50" opacity="0.85" font-family="'Segoe UI', system-ui, -apple-system, 'Helvetica Neue', sans-serif" font-size="12.5">Python, TypeScript, SQL, a little Solidity</text>
     <text x="24" y="145" fill="#C890A6" font-family="'Segoe UI', system-ui, -apple-system, 'Helvetica Neue', sans-serif" font-size="12.5" font-weight="600">ml</text>
-    <text x="116" y="145" fill="#574A50" opacity="0.85" font-family="'Segoe UI', system-ui, -apple-system, 'Helvetica Neue', sans-serif" font-size="12.5">scikit-learn, pandas, NumPy, conformal</text>
-    <text x="116" y="160" fill="#574A50" opacity="0.85" font-family="'Segoe UI', system-ui, -apple-system, 'Helvetica Neue', sans-serif" font-size="12.5">prediction</text>
-    <text x="24" y="187" fill="#C890A6" font-family="'Segoe UI', system-ui, -apple-system, 'Helvetica Neue', sans-serif" font-size="12.5" font-weight="600">backend</text>
-    <text x="116" y="187" fill="#574A50" opacity="0.85" font-family="'Segoe UI', system-ui, -apple-system, 'Helvetica Neue', sans-serif" font-size="12.5">FastAPI, asyncio, Postgres, MongoDB, Docker</text>
-    <text x="24" y="214" fill="#C890A6" font-family="'Segoe UI', system-ui, -apple-system, 'Helvetica Neue', sans-serif" font-size="12.5" font-weight="600">frontend</text>
-    <text x="116" y="214" fill="#574A50" opacity="0.85" font-family="'Segoe UI', system-ui, -apple-system, 'Helvetica Neue', sans-serif" font-size="12.5">React, Vite, hand-written SVG when a chart</text>
-    <text x="116" y="229" fill="#574A50" opacity="0.85" font-family="'Segoe UI', system-ui, -apple-system, 'Helvetica Neue', sans-serif" font-size="12.5">has to be honest</text>
-    <text x="24" y="256" fill="#C890A6" font-family="'Segoe UI', system-ui, -apple-system, 'Helvetica Neue', sans-serif" font-size="12.5" font-weight="600">testing</text>
-    <text x="116" y="256" fill="#574A50" opacity="0.85" font-family="'Segoe UI', system-ui, -apple-system, 'Helvetica Neue', sans-serif" font-size="12.5">pytest and vitest, on every push</text>
-    <text x="24" y="283" fill="#C890A6" font-family="'Segoe UI', system-ui, -apple-system, 'Helvetica Neue', sans-serif" font-size="12.5" font-weight="600">ci</text>
-    <text x="116" y="283" fill="#574A50" opacity="0.85" font-family="'Segoe UI', system-ui, -apple-system, 'Helvetica Neue', sans-serif" font-size="12.5">GitHub Actions on every push</text>
-    <text x="24" y="310" fill="#C890A6" font-family="'Segoe UI', system-ui, -apple-system, 'Helvetica Neue', sans-serif" font-size="12.5" font-weight="600">proof</text>
-    <text x="116" y="310" fill="#574A50" opacity="0.85" font-family="'Segoe UI', system-ui, -apple-system, 'Helvetica Neue', sans-serif" font-size="12.5">6 live consoles, 183 commits, 15 workflows</text>
+    <text x="116" y="145" fill="#574A50" opacity="0.85" font-family="'Segoe UI', system-ui, -apple-system, 'Helvetica Neue', sans-serif" font-size="12.5">scikit-learn, pandas, conformal prediction</text>
+    <text x="24" y="172" fill="#C890A6" font-family="'Segoe UI', system-ui, -apple-system, 'Helvetica Neue', sans-serif" font-size="12.5" font-weight="600">backend</text>
+    <text x="116" y="172" fill="#574A50" opacity="0.85" font-family="'Segoe UI', system-ui, -apple-system, 'Helvetica Neue', sans-serif" font-size="12.5">FastAPI, asyncio, Postgres, MongoDB, Docker</text>
+    <text x="24" y="199" fill="#C890A6" font-family="'Segoe UI', system-ui, -apple-system, 'Helvetica Neue', sans-serif" font-size="12.5" font-weight="600">frontend</text>
+    <text x="116" y="199" fill="#574A50" opacity="0.85" font-family="'Segoe UI', system-ui, -apple-system, 'Helvetica Neue', sans-serif" font-size="12.5">React, Vite, hand-written SVG charts</text>
+    <text x="24" y="226" fill="#C890A6" font-family="'Segoe UI', system-ui, -apple-system, 'Helvetica Neue', sans-serif" font-size="12.5" font-weight="600">testing</text>
+    <text x="116" y="226" fill="#574A50" opacity="0.85" font-family="'Segoe UI', system-ui, -apple-system, 'Helvetica Neue', sans-serif" font-size="12.5">pytest, vitest, Playwright, on every push</text>
+    <text x="24" y="253" fill="#C890A6" font-family="'Segoe UI', system-ui, -apple-system, 'Helvetica Neue', sans-serif" font-size="12.5" font-weight="600">full stack</text>
+    <text x="116" y="253" fill="#574A50" opacity="0.85" font-family="'Segoe UI', system-ui, -apple-system, 'Helvetica Neue', sans-serif" font-size="12.5">Next.js, Prisma, offline-first sync</text>
+    <text x="24" y="280" fill="#C890A6" font-family="'Segoe UI', system-ui, -apple-system, 'Helvetica Neue', sans-serif" font-size="12.5" font-weight="600">proof</text>
+    <text x="116" y="280" fill="#574A50" opacity="0.85" font-family="'Segoe UI', system-ui, -apple-system, 'Helvetica Neue', sans-serif" font-size="12.5">7 live, 232 commits, 16 workflows</text>
   </g>
 </svg>

@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 214" width="1000" height="214" role="img" aria-label="ClaimKit — 266 tests; two phones edit offline and converge on one claim">
+  <title>ClaimKit — 266 tests; two phones edit offline and converge on one claim</title>
+  <rect width="1000" height="214" rx="12" fill="#FFFDFB"/>
+  <rect width="1000" height="214" rx="12" fill="none" stroke="#E0BAC6" stroke-width="2"/>
+  <rect x="0" y="0" width="1000" height="4" rx="2" fill="#C890A6" opacity="0.55"/>
+  <text x="24" y="34" fill="#C890A6" font-family="'Segoe UI', system-ui, -apple-system, 'Helvetica Neue', sans-serif" font-size="10.5" letter-spacing="2">07 · FULL STACK · THE NEWEST</text>
+  <text x="24" y="62" fill="#574A50" font-family="Georgia, 'Iowan Old Style', 'Times New Roman', serif" font-size="26">ClaimKit</text>
+  <text x="24" y="86" fill="#574A50" opacity="0.76" font-family="'Segoe UI', system-ui, -apple-system, 'Helvetica Neue', sans-serif" font-size="12.5">A family puts one health-insurance claim together, from phones</text>
+  <text x="24" y="103" fill="#574A50" opacity="0.76" font-family="'Segoe UI', system-ui, -apple-system, 'Helvetica Neue', sans-serif" font-size="12.5">in a hospital corridor with no signal.</text>
+  <line x1="24" y1="122" x2="520" y2="122" stroke="#F0DEE6" stroke-width="2"/>
+  <text x="24" y="156" fill="#C890A6" font-family="Georgia, 'Iowan Old Style', 'Times New Roman', serif" font-size="30">266</text>
+  <text x="96" y="144" fill="#574A50" opacity="0.72" font-family="'Segoe UI', system-ui, -apple-system, 'Helvetica Neue', sans-serif" font-size="11.5">tests against a real Postgres. Two phones edit offline,</text>
+  <text x="96" y="159" fill="#574A50" opacity="0.72" font-family="'Segoe UI', system-ui, -apple-system, 'Helvetica Neue', sans-serif" font-size="11.5">and both end up with the same claim.</text>
+  <rect x="24" y="178" width="77" height="20" rx="10" fill="#F5E6EE" stroke="#E0BAC6" stroke-width="1"/>
+  <text x="62" y="192" text-anchor="middle" fill="#574A50" opacity="0.8" font-family="'Segoe UI', system-ui, -apple-system, 'Helvetica Neue', sans-serif" font-size="10.5">TypeScript</text>
+  <rect x="108" y="178" width="58" height="20" rx="10" fill="#F5E6EE" stroke="#E0BAC6" stroke-width="1"/>
+  <text x="137" y="192" text-anchor="middle" fill="#574A50" opacity="0.8" font-family="'Segoe UI', system-ui, -apple-system, 'Helvetica Neue', sans-serif" font-size="10.5">Next.js</text>
+  <rect x="173" y="178" width="64" height="20" rx="10" fill="#F5E6EE" stroke="#E0BAC6" stroke-width="1"/>
+  <text x="205" y="192" text-anchor="middle" fill="#574A50" opacity="0.8" font-family="'Segoe UI', system-ui, -apple-system, 'Helvetica Neue', sans-serif" font-size="10.5">Postgres</text>
+  <rect x="244" y="178" width="51" height="20" rx="10" fill="#F5E6EE" stroke="#E0BAC6" stroke-width="1"/>
+  <text x="270" y="192" text-anchor="middle" fill="#574A50" opacity="0.8" font-family="'Segoe UI', system-ui, -apple-system, 'Helvetica Neue', sans-serif" font-size="10.5">Prisma</text>
+  <rect x="302" y="178" width="77" height="20" rx="10" fill="#F5E6EE" stroke="#E0BAC6" stroke-width="1"/>
+  <text x="341" y="192" text-anchor="middle" fill="#574A50" opacity="0.8" font-family="'Segoe UI', system-ui, -apple-system, 'Helvetica Neue', sans-serif" font-size="10.5">Playwright</text>
+  <g><rect x="604" y="72" width="36" height="92" rx="7" fill="#F5E6EE" stroke="#E0BAC6" stroke-width="2"/><rect x="611" y="84" width="22" height="3" rx="1.5" fill="#E0BAC6"/><rect x="611" y="93" width="16" height="3" rx="1.5" fill="#E0BAC6" opacity=".7"/><rect x="611" y="102" width="20" height="3" rx="1.5" fill="#E0BAC6" opacity=".5"/><circle cx="622" cy="152" r="3" fill="#E0BAC6"/><text x="622" y="184" text-anchor="middle" fill="#574A50" opacity=".7" font-family="'Segoe UI', system-ui, -apple-system, 'Helvetica Neue', sans-serif" font-size="10.5">phone A</text></g>
+  <g><rect x="908" y="72" width="36" height="92" rx="7" fill="#F5E6EE" stroke="#E0BAC6" stroke-width="2"/><rect x="915" y="84" width="22" height="3" rx="1.5" fill="#E0BAC6"/><rect x="915" y="93" width="16" height="3" rx="1.5" fill="#E0BAC6" opacity=".7"/><rect x="915" y="102" width="20" height="3" rx="1.5" fill="#E0BAC6" opacity=".5"/><circle cx="926" cy="152" r="3" fill="#E0BAC6"/><text x="926" y="184" text-anchor="middle" fill="#574A50" opacity=".7" font-family="'Segoe UI', system-ui, -apple-system, 'Helvetica Neue', sans-serif" font-size="10.5">phone B</text></g>
+  <rect x="740.0" y="66" width="68" height="10" rx="3" fill="#F5E6EE" stroke="#E0BAC6" stroke-width="1.5"/>
+  <rect x="740.0" y="80" width="68" height="10" rx="3" fill="#F5E6EE" stroke="#E0BAC6" stroke-width="1.5"/>
+  <rect x="740.0" y="94" width="68" height="10" rx="3" fill="#F5E6EE" stroke="#E0BAC6" stroke-width="1.5"/>
+  <text x="774.0" y="54" text-anchor="middle" fill="#574A50" opacity=".7" font-family="'Segoe UI', system-ui, -apple-system, 'Helvetica Neue', sans-serif" font-size="10.5">one ordered log</text>
+  <path d="M 640 118 C 694 118, 704.0 78, 740.0 78" fill="none" stroke="#E0BAC6" stroke-width="1.6" stroke-dasharray="3 5" stroke-linecap="round"/>
+  <path d="M 908 118 C 854 118, 844.0 78, 808.0 78" fill="none" stroke="#E0BAC6" stroke-width="1.6" stroke-dasharray="3 5" stroke-linecap="round"/>
+  <circle r="4.2" fill="#C890A6" opacity="0"><animateMotion dur="2.2s" begin="0s" repeatCount="indefinite" path="M 640 118 C 694 118, 704.0 78, 740.0 78"/><animate attributeName="opacity" values="0;1;1;0" keyTimes="0;.1;.85;1" dur="2.2s" begin="0s" repeatCount="indefinite"/></circle>
+  <circle r="4.2" fill="#A9718A" opacity="0"><animateMotion dur="2.2s" begin="0.5s" repeatCount="indefinite" path="M 908 118 C 854 118, 844.0 78, 808.0 78"/><animate attributeName="opacity" values="0;1;1;0" keyTimes="0;.1;.85;1" dur="2.2s" begin="0.5s" repeatCount="indefinite"/></circle>
+  <circle r="4.2" fill="#C890A6" opacity="0"><animateMotion dur="2.2s" begin="1.1s" repeatCount="indefinite" path="M 908 118 C 854 118, 844.0 78, 808.0 78" keyPoints="1;0" keyTimes="0;1" calcMode="linear"/><animate attributeName="opacity" values="0;1;1;0" keyTimes="0;.1;.85;1" dur="2.2s" begin="1.1s" repeatCount="indefinite"/></circle>
+  <circle r="4.2" fill="#A9718A" opacity="0"><animateMotion dur="2.2s" begin="1.6s" repeatCount="indefinite" path="M 640 118 C 694 118, 704.0 78, 740.0 78" keyPoints="1;0" keyTimes="0;1" calcMode="linear"/><animate attributeName="opacity" values="0;1;1;0" keyTimes="0;.1;.85;1" dur="2.2s" begin="1.6s" repeatCount="indefinite"/></circle>
+  <text x="774.0" y="192" text-anchor="middle" fill="#C890A6" font-family="'Segoe UI', system-ui, -apple-system, 'Helvetica Neue', sans-serif" font-size="11.5" font-weight="600">edited offline &#8594; queued &#8594; converged</text>
+</svg>

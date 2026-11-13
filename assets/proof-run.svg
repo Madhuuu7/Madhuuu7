@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 360" width="1000" height="360" role="img" aria-label="The proof run: seven claims, what was done to each, and what came back">
+  <title>The proof run: seven claims, what was done to each, and what came back</title>
+  <rect width="1000" height="360" rx="12" fill="#FFFDFB"/>
+  <rect width="1000" height="360" rx="12" fill="none" stroke="#E0BAC6" stroke-width="2"/>
+  <style>
+    .r0 { animation: r0 16.0s linear infinite; }
+    @keyframes r0 { 0%, 4% { opacity: 0; } 7%, 94% { opacity: 1; } 100% { opacity: 0; } }
+    .r1 { animation: r1 16.0s linear infinite; }
+    @keyframes r1 { 0%, 13% { opacity: 0; } 16%, 94% { opacity: 1; } 100% { opacity: 0; } }
+    .r2 { animation: r2 16.0s linear infinite; }
+    @keyframes r2 { 0%, 22% { opacity: 0; } 25%, 94% { opacity: 1; } 100% { opacity: 0; } }
+    .r3 { animation: r3 16.0s linear infinite; }
+    @keyframes r3 { 0%, 31% { opacity: 0; } 34%, 94% { opacity: 1; } 100% { opacity: 0; } }
+    .r4 { animation: r4 16.0s linear infinite; }
+    @keyframes r4 { 0%, 40% { opacity: 0; } 43%, 94% { opacity: 1; } 100% { opacity: 0; } }
+    .r5 { animation: r5 16.0s linear infinite; }
+    @keyframes r5 { 0%, 49% { opacity: 0; } 52%, 94% { opacity: 1; } 100% { opacity: 0; } }
+    .r6 { animation: r6 16.0s linear infinite; }
+    @keyframes r6 { 0%, 58% { opacity: 0; } 61%, 94% { opacity: 1; } 100% { opacity: 0; } }
+    .r7 { animation: r7 16.0s linear infinite; }
+    @keyframes r7 { 0%, 67% { opacity: 0; } 70%, 94% { opacity: 1; } 100% { opacity: 0; } }
+    .cur { animation: cur 1s steps(1, end) infinite; }
+    @keyframes cur { 50% { opacity: 0; } }
+    @media (prefers-reduced-motion: reduce) { [class] { animation: none; } }
+  </style>
+  <circle cx="34" cy="30" r="5" fill="#E0BAC6"/>
+  <circle cx="50" cy="30" r="5" fill="#EBD2DC"/>
+  <circle cx="66" cy="30" r="5" fill="#C890A6"/>
+  <text x="96" y="35" fill="#C890A6" font-family="'Segoe UI', system-ui, -apple-system, 'Helvetica Neue', sans-serif" font-size="12.5" letter-spacing="1.2">madhura@github ~ $ ./prove.sh</text>
+  <rect class="cur" x="322" y="23" width="8" height="15" fill="#C890A6" opacity=".7"/>
+  <line x1="26" y1="52" x2="974" y2="52" stroke="#F0DEE6" stroke-width="2"/>
+  <text x="40" y="76" fill="#574A50" opacity=".55" font-family="'Segoe UI', system-ui, -apple-system, 'Helvetica Neue', sans-serif" font-size="11" letter-spacing="1.6">CLAIM</text>
+  <text x="168" y="76" fill="#574A50" opacity=".55" font-family="'Segoe UI', system-ui, -apple-system, 'Helvetica Neue', sans-serif" font-size="11" letter-spacing="1.6">WHAT WAS DONE TO IT</text>
+  <text x="960" y="76" text-anchor="end" fill="#574A50" opacity=".55" font-family="'Segoe UI', system-ui, -apple-system, 'Helvetica Neue', sans-serif" font-size="11" letter-spacing="1.6">WHAT CAME BACK</text>
+  <g class="r0">
+    <path d="M 40 105 l 4 4 l 8 -9" fill="none" stroke="#C890A6" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="62" y="110" fill="#574A50" font-family="Georgia, 'Iowan Old Style', 'Times New Roman', serif" font-size="16">revenant</text>
+    <text x="168" y="110" fill="#574A50" opacity=".76" font-family="'Segoe UI', system-ui, -apple-system, 'Helvetica Neue', sans-serif" font-size="13">killed at every one of its journal boundaries</text>
+    <text x="960" y="110" text-anchor="end" fill="#C890A6" font-family="'Segoe UI', system-ui, -apple-system, 'Helvetica Neue', sans-serif" font-size="13.5" font-weight="600">140 / 140 recovered</text>
+  </g>
+  <g class="r1">
+    <line x1="40" y1="120" x2="960" y2="120" stroke="#F0DEE6" stroke-width="1.5"/>
+    <path d="M 40 135 l 4 4 l 8 -9" fill="none" stroke="#C890A6" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="62" y="140" fill="#574A50" font-family="Georgia, 'Iowan Old Style', 'Times New Roman', serif" font-size="16">relay</text>
+    <text x="168" y="140" fill="#574A50" opacity=".76" font-family="'Segoe UI', system-ui, -apple-system, 'Helvetica Neue', sans-serif" font-size="13">replayed a 4,000-request trace through four policies</text>
+    <text x="960" y="140" text-anchor="end" fill="#C890A6" font-family="'Segoe UI', system-ui, -apple-system, 'Helvetica Neue', sans-serif" font-size="13.5" font-weight="600">p95 down 71.8%</text>
+  </g>
+  <g class="r2">
+    <line x1="40" y1="150" x2="960" y2="150" stroke="#F0DEE6" stroke-width="1.5"/>
+    <path d="M 40 165 l 4 4 l 8 -9" fill="none" stroke="#C890A6" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="62" y="170" fill="#574A50" font-family="Georgia, 'Iowan Old Style', 'Times New Roman', serif" font-size="16">gridcast</text>
+    <text x="168" y="170" fill="#574A50" opacity=".76" font-family="'Segoe UI', system-ui, -apple-system, 'Helvetica Neue', sans-serif" font-size="13">scored on 32,391 blocks it never trained on</text>
+    <text x="960" y="170" text-anchor="end" fill="#C890A6" font-family="'Segoe UI', system-ui, -apple-system, 'Helvetica Neue', sans-serif" font-size="13.5" font-weight="600">5.07% MAPE</text>
+  </g>
+  <g class="r3">
+    <line x1="40" y1="180" x2="960" y2="180" stroke="#F0DEE6" stroke-width="1.5"/>
+    <path d="M 40 195 l 4 4 l 8 -9" fill="none" stroke="#C890A6" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="62" y="200" fill="#574A50" font-family="Georgia, 'Iowan Old Style', 'Times New Roman', serif" font-size="16">transitlab</text>
+    <text x="168" y="200" fill="#574A50" opacity=".76" font-family="'Segoe UI', system-ui, -apple-system, 'Helvetica Neue', sans-serif" font-size="13">raced against the Python engine it was ported from</text>
+    <text x="960" y="200" text-anchor="end" fill="#C890A6" font-family="'Segoe UI', system-ui, -apple-system, 'Helvetica Neue', sans-serif" font-size="13.5" font-weight="600">37x faster</text>
+  </g>
+  <g class="r4">
+    <line x1="40" y1="210" x2="960" y2="210" stroke="#F0DEE6" stroke-width="1.5"/>
+    <path d="M 40 225 l 4 4 l 8 -9" fill="none" stroke="#C890A6" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="62" y="230" fill="#574A50" font-family="Georgia, 'Iowan Old Style', 'Times New Roman', serif" font-size="16">verdict</text>
+    <text x="168" y="230" fill="#574A50" opacity=".76" font-family="'Segoe UI', system-ui, -apple-system, 'Helvetica Neue', sans-serif" font-size="13">re-tested every case, against looking once</text>
+    <text x="960" y="230" text-anchor="end" fill="#C890A6" font-family="'Segoe UI', system-ui, -apple-system, 'Helvetica Neue', sans-serif" font-size="13.5" font-weight="600">46.7% vs 5.9% false alarms</text>
+  </g>
+  <g class="r5">
+    <line x1="40" y1="240" x2="960" y2="240" stroke="#F0DEE6" stroke-width="1.5"/>
+    <path d="M 40 255 l 4 4 l 8 -9" fill="none" stroke="#C890A6" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="62" y="260" fill="#574A50" font-family="Georgia, 'Iowan Old Style', 'Times New Roman', serif" font-size="16">nanofaas</text>
+    <text x="168" y="260" fill="#574A50" opacity=".76" font-family="'Segoe UI', system-ui, -apple-system, 'Helvetica Neue', sans-serif" font-size="13">timed a cold start against a warm call</text>
+    <text x="960" y="260" text-anchor="end" fill="#C890A6" font-family="'Segoe UI', system-ui, -apple-system, 'Helvetica Neue', sans-serif" font-size="13.5" font-weight="600">1,028x apart</text>
+  </g>
+  <g class="r6">
+    <line x1="40" y1="270" x2="960" y2="270" stroke="#F0DEE6" stroke-width="1.5"/>
+    <path d="M 40 285 l 4 4 l 8 -9" fill="none" stroke="#C890A6" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="62" y="290" fill="#574A50" font-family="Georgia, 'Iowan Old Style', 'Times New Roman', serif" font-size="16">claimkit</text>
+    <text x="168" y="290" fill="#574A50" opacity=".76" font-family="'Segoe UI', system-ui, -apple-system, 'Helvetica Neue', sans-serif" font-size="13">two phones, no signal, the same field</text>
+    <text x="960" y="290" text-anchor="end" fill="#C890A6" font-family="'Segoe UI', system-ui, -apple-system, 'Helvetica Neue', sans-serif" font-size="13.5" font-weight="600">conflict shown, nothing lost</text>
+  </g>
+  <g class="r7"><text x="40" y="332" fill="#574A50" opacity=".78" font-family="'Segoe UI', system-ui, -apple-system, 'Helvetica Neue', sans-serif" font-size="13">7 claims, 7 checked. Each one is a test that runs in CI, not a sentence in a README.</text></g>
+</svg>

@@ -1,5 +1,5 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 258" width="1000" height="258" role="img" aria-label="How I build — four habits that repeat across the six projects">
-  <title>How I build — four habits that repeat across the six projects</title>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 258" width="1000" height="258" role="img" aria-label="How I build — four habits that repeat across the projects">
+  <title>How I build — four habits that repeat across the projects</title>
   <rect width="1000" height="258" rx="12" fill="#FFFDFB"/>
   <rect width="1000" height="258" rx="12" fill="none" stroke="#E0BAC6" stroke-width="2"/>
   <text x="26" y="40" fill="#C890A6" font-family="'Segoe UI', system-ui, -apple-system, 'Helvetica Neue', sans-serif" font-size="12" letter-spacing="2.4">madhura@github ~ $ cat how-i-build.md</text>
