@@ -137,7 +137,7 @@
 <p align="center"><img src="assets/coding.gif" alt="" width="320"></p> -->
 
 <p align="center">
-  <img src="assets/footer.svg" alt="Thanks for visiting my little garden" width="100%">
+  <img src="assets/footer.svg" alt="Thanks for visiting my little garden. A small dino runs across it, hopping over the blossoms." width="100%">
 </p>
 
 <p align="center">

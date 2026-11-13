@@ -732,30 +732,135 @@ def contributions() -> str:
 # -- 8. footer -------------------------------------------------------------
 
 
+# The dino, one character per pixel. Drawn as a bitmap so it stays a dino at
+# any size and its outline is something a person can read and correct.
+DINO = [
+    "........XXXXXXX.",
+    ".......XXXXXXXXX",
+    ".......XX.XXXXXX",
+    ".......XXXXXXXXX",
+    ".......XXXXX....",
+    ".......XXXXXXXX.",
+    "X.....XXXXX.....",
+    "X....XXXXXXXX...",
+    "XX..XXXXXXXX.X..",
+    "XXXXXXXXXXXX....",
+    "XXXXXXXXXXXX....",
+    ".XXXXXXXXXX.....",
+    "..XXXXXXXX......",
+    "...XXXXXX.......",
+]
+# Two pairs of legs. Showing one and then the other is the whole run cycle.
+LEGS_A = [
+    "...XX..XX.......",
+    "...X....XX......",
+    "...XX...........",
+]
+LEGS_B = [
+    "...XX..XX.......",
+    "...XX...X.......",
+    "........XX......",
+]
+
+
+def _pixels(rows: list[str], px: float, top: int = 0) -> str:
+    """Runs of filled cells become one rect each, so the file stays small."""
+    out = []
+    for r, row in enumerate(rows):
+        c = 0
+        while c < len(row):
+            if row[c] != "X":
+                c += 1
+                continue
+            start = c
+            while c < len(row) and row[c] == "X":
+                c += 1
+            out.append(f'<rect x="{start * px:.1f}" y="{(top + r) * px:.1f}" '
+                       f'width="{(c - start) * px:.1f}" height="{px + 0.4:.1f}"/>')
+    return "".join(out)
+
+
 def footer() -> str:
-    h = 120
+    h = 178
+    ground = 150                    # where the branches run, and the dino's feet
+    px = 3.0
+    dino_w = 16 * px
+    dino_h = (len(DINO) + len(LEGS_A)) * px
+    base_x = 40                     # where it stands when nothing is moving
+    travel_from, travel_to = -100, 980
+    span = travel_to - travel_from
+    lap = 14                        # seconds to cross the garden
+
+    # The blossoms it has to clear. Each jump is timed from where the flower
+    # actually is, so moving a blossom moves the jump with it.
+    flowers = [96, 208, 792, 904]
+    frames = ["0% { transform: translateY(0); }"]
+    for fx in flowers:
+        t = (fx - (base_x + dino_w / 2) - travel_from) / span * 100
+        frames.append(f"{t - 3.4:.1f}% {{ transform: translateY(0); "
+                      f"animation-timing-function: cubic-bezier(.2,.7,.4,1); }}")
+        frames.append(f"{t:.1f}% {{ transform: translateY(-38px); "
+                      f"animation-timing-function: cubic-bezier(.6,0,.8,.3); }}")
+        frames.append(f"{t + 3.4:.1f}% {{ transform: translateY(0); }}")
+    frames.append("100% { transform: translateY(0); }")
+
+    style = (
+        "  <style>\n"
+        f"    .run {{ animation: run {lap}s linear infinite; }}\n"
+        f"    @keyframes run {{ from {{ transform: translateX({travel_from}px); }} "
+        f"to {{ transform: translateX({travel_to}px); }} }}\n"
+        f"    .hop {{ animation: hop {lap}s linear infinite; }}\n"
+        "    @keyframes hop { " + " ".join(frames) + " }\n"
+        "    .la { animation: step .28s steps(1, end) infinite; }\n"
+        "    .lb { opacity: 0; animation: step .28s steps(1, end) -.14s infinite; }\n"
+        "    @keyframes step { 0% { opacity: 1; } 50%, 100% { opacity: 0; } }\n"
+        "    @media (prefers-reduced-motion: reduce) {\n"
+        "      .run, .hop, .la, .lb { animation: none; }\n"
+        "    }\n"
+        "  </style>"
+    )
+
+    dino_top = ground - dino_h - 1
     body = [
         '  <defs>',
         f'    <linearGradient id="dusk" x1="0" y1="1" x2="0.8" y2="0">'
         f'<stop offset="0" stop-color="{PAPER}"/><stop offset="0.55" stop-color="{CREAM}"/>'
         f'<stop offset="1" stop-color="{PAPER}"/></linearGradient>',
+        f'    <clipPath id="garden"><rect width="{W}" height="{h}" rx="14"/></clipPath>',
         '  </defs>',
+        style,
         f'  <rect width="{W}" height="{h}" rx="14" fill="url(#dusk)"/>',
-        f'  <rect width="{W}" height="{h}" rx="14" fill="none" stroke="{ROSE}" stroke-width="2"/>',
-        f'  <path d="M -10 96 C 150 76, 300 108, 460 88" fill="none" stroke="{ROSE}" '
-        f'stroke-width="2.2" stroke-linecap="round" opacity="0.65"/>',
-        f'  <path d="M 1010 96 C 850 76, 700 108, 540 88" fill="none" stroke="{ROSE}" '
-        f'stroke-width="2.2" stroke-linecap="round" opacity="0.65"/>',
-        blossom(96, 86, 4.0, DUSTY, 0.85),
-        blossom(208, 96, 3.2, DUSTY, 0.6),
-        blossom(904, 86, 4.0, DUSTY, 0.85),
-        blossom(792, 96, 3.2, DUSTY, 0.6),
+        f'  <path d="M -10 {ground + 4} C 150 {ground - 16}, 300 {ground + 16}, 460 {ground - 4}" '
+        f'fill="none" stroke="{ROSE}" stroke-width="2.2" stroke-linecap="round" opacity="0.65"/>',
+        f'  <path d="M 1010 {ground + 4} C 850 {ground - 16}, 700 {ground + 16}, 540 {ground - 4}" '
+        f'fill="none" stroke="{ROSE}" stroke-width="2.2" stroke-linecap="round" opacity="0.65"/>',
+        blossom(96, ground - 6, 4.0, DUSTY, 0.85),
+        blossom(208, ground + 4, 3.2, DUSTY, 0.6),
+        blossom(904, ground - 6, 4.0, DUSTY, 0.85),
+        blossom(792, ground + 4, 3.2, DUSTY, 0.6),
         f'  <text x="{W/2}" y="54" text-anchor="middle" fill="{INK}" font-family="{SERIF}" '
         f'font-size="21">Thanks for visiting my little garden</text>',
         f'  <text x="{W/2}" y="80" text-anchor="middle" fill="{DUSTY}" font-family="{SANS}" '
         f'font-size="13">open a console, then read what it says it cannot show you</text>',
+        # the dino: across the garden, over every blossom, and round again
+        '  <g clip-path="url(#garden)">',
+        '    <g class="run">',
+        '      <g class="hop">',
+        f'        <g transform="translate({base_x} {dino_top:.1f})" fill="{DUSTY}">',
+        '          ' + _pixels(DINO, px),
+        f'          <rect x="{9 * px:.1f}" y="{2 * px:.1f}" width="{px:.1f}" height="{px:.1f}" '
+        f'fill="{CREAM}"/>',
+        '          <g class="la">' + _pixels(LEGS_A, px, len(DINO)) + '</g>',
+        '          <g class="lb">' + _pixels(LEGS_B, px, len(DINO)) + '</g>',
+        '        </g>',
+        '      </g>',
+        '    </g>',
+        '  </g>',
+        f'  <rect width="{W}" height="{h}" rx="14" fill="none" stroke="{ROSE}" stroke-width="2"/>',
     ]
-    return svg(W, h, "\n".join(body), "Thanks for visiting my little garden")
+    return svg(W, h, "\n".join(body),
+               "Thanks for visiting my little garden. A small dino runs across it, "
+               "hopping over the blossoms.")
 
 
 SECTIONS = [
